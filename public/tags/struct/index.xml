@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Struct on Mainroad</title>
-    <link>//localhost:1313/tags/struct/</link>
+    <link>http://localhost:1313/echo-hugo/tags/struct/</link>
     <description>Recent content in Struct on Mainroad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/struct/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/echo-hugo/tags/struct/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Embedding Struct in Go</title>
-      <link>//localhost:1313/post/2023-09-06-go-struct-embedding/</link>
+      <link>http://localhost:1313/echo-hugo/post/2023-09-06-go-struct-embedding/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/2023-09-06-go-struct-embedding/</guid>
+      <guid>http://localhost:1313/echo-hugo/post/2023-09-06-go-struct-embedding/</guid>
       <description>In Go, a struct is a composite data type that groups together variables (fields) under a single name. Structs are used to create custom data structures, similar to classes in other languages. You can also embed one struct within another struct to compose more complex data structures. This concept is known as &amp;ldquo;embedding&amp;rdquo; in Go.&#xA;Here&amp;rsquo;s an example of embedding in Go, along with its benefits, understanding, and conclusion:&#xA;Example of Embedding in Go: Let&amp;rsquo;s say you&amp;rsquo;re building a system to manage different types of vehicles.</description>
     </item>
   </channel>

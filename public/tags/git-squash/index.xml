@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git-Squash on Mainroad</title>
-    <link>//localhost:1313/tags/git-squash/</link>
+    <link>http://localhost:1313/echo-hugo/tags/git-squash/</link>
     <description>Recent content in Git-Squash on Mainroad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/git-squash/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/echo-hugo/tags/git-squash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mastering Git Squash: Streamlining Your Commit History</title>
-      <link>//localhost:1313/post/2023-08-30-mastering-git-squash/</link>
+      <link>http://localhost:1313/echo-hugo/post/2023-08-30-mastering-git-squash/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/post/2023-08-30-mastering-git-squash/</guid>
+      <guid>http://localhost:1313/echo-hugo/post/2023-08-30-mastering-git-squash/</guid>
       <description>Understanding the Squash Flag, Benefits, and Real-World Use Cases&#xA;Git is a tool that helps you keep track of changes to your code. It can be used to collaborate with other developers, and it can also be used to revert to previous versions of your code. However, if you don&amp;rsquo;t use Git carefully, you can end up with a messy commit history. This can make it difficult to understand what you did and why.</description>
     </item>
   </channel>

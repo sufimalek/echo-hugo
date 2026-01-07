@@ -2,178 +2,178 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Mainroad</title>
-    <link>//localhost:1313/categories/</link>
+    <link>http://localhost:1313/echo-hugo/categories/</link>
     <description>Recent content in Categories on Mainroad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/echo-hugo/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang</title>
-      <link>//localhost:1313/categories/golang/</link>
+      <link>http://localhost:1313/echo-hugo/categories/golang/</link>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/golang/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/golang/</guid>
       <description></description>
     </item>
     <item>
       <title>Kafka</title>
-      <link>//localhost:1313/categories/kafka/</link>
+      <link>http://localhost:1313/echo-hugo/categories/kafka/</link>
       <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/kafka/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/kafka/</guid>
       <description></description>
     </item>
     <item>
       <title>Optimization</title>
-      <link>//localhost:1313/categories/optimization/</link>
+      <link>http://localhost:1313/echo-hugo/categories/optimization/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/optimization/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/optimization/</guid>
       <description></description>
     </item>
     <item>
       <title>Eloquent</title>
-      <link>//localhost:1313/categories/eloquent/</link>
+      <link>http://localhost:1313/echo-hugo/categories/eloquent/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/eloquent/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/eloquent/</guid>
       <description></description>
     </item>
     <item>
       <title>Extend</title>
-      <link>//localhost:1313/categories/extend/</link>
+      <link>http://localhost:1313/echo-hugo/categories/extend/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/extend/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/extend/</guid>
       <description></description>
     </item>
     <item>
       <title>Laravel</title>
-      <link>//localhost:1313/categories/laravel/</link>
+      <link>http://localhost:1313/echo-hugo/categories/laravel/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/laravel/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/laravel/</guid>
       <description></description>
     </item>
     <item>
       <title>Php</title>
-      <link>//localhost:1313/categories/php/</link>
+      <link>http://localhost:1313/echo-hugo/categories/php/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/php/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/php/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>//localhost:1313/categories/docker/</link>
+      <link>http://localhost:1313/echo-hugo/categories/docker/</link>
       <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/docker/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>//localhost:1313/categories/go/</link>
+      <link>http://localhost:1313/echo-hugo/categories/go/</link>
       <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/go/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Multi-Stage</title>
-      <link>//localhost:1313/categories/multi-stage/</link>
+      <link>http://localhost:1313/echo-hugo/categories/multi-stage/</link>
       <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/multi-stage/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/multi-stage/</guid>
       <description></description>
     </item>
     <item>
       <title>Scratch</title>
-      <link>//localhost:1313/categories/scratch/</link>
+      <link>http://localhost:1313/echo-hugo/categories/scratch/</link>
       <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/scratch/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/scratch/</guid>
       <description></description>
     </item>
     <item>
       <title>FrankenPHP</title>
-      <link>//localhost:1313/categories/frankenphp/</link>
+      <link>http://localhost:1313/echo-hugo/categories/frankenphp/</link>
       <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/frankenphp/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/frankenphp/</guid>
       <description></description>
     </item>
     <item>
       <title>Arithmetic</title>
-      <link>//localhost:1313/categories/arithmetic/</link>
+      <link>http://localhost:1313/echo-hugo/categories/arithmetic/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/arithmetic/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/arithmetic/</guid>
       <description></description>
     </item>
     <item>
       <title>Extension</title>
-      <link>//localhost:1313/categories/extension/</link>
+      <link>http://localhost:1313/echo-hugo/categories/extension/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/extension/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/extension/</guid>
       <description></description>
     </item>
     <item>
       <title>MySQL</title>
-      <link>//localhost:1313/categories/mysql/</link>
+      <link>http://localhost:1313/echo-hugo/categories/mysql/</link>
       <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/mysql/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/mysql/</guid>
       <description></description>
     </item>
     <item>
       <title>Development</title>
-      <link>//localhost:1313/categories/development/</link>
+      <link>http://localhost:1313/echo-hugo/categories/development/</link>
       <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
-      <guid>//localhost:1313/categories/development/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/development/</guid>
       <description></description>
     </item>
     <item>
       <title>Featured</title>
-      <link>//localhost:1313/categories/featured/</link>
+      <link>http://localhost:1313/echo-hugo/categories/featured/</link>
       <pubDate>Tue, 01 Sep 2020 13:09:01 +0000</pubDate>
-      <guid>//localhost:1313/categories/featured/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/featured/</guid>
       <description></description>
     </item>
     <item>
       <title>Symfony</title>
-      <link>//localhost:1313/categories/symfony/</link>
+      <link>http://localhost:1313/echo-hugo/categories/symfony/</link>
       <pubDate>Tue, 01 Sep 2020 13:09:01 +0000</pubDate>
-      <guid>//localhost:1313/categories/symfony/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/symfony/</guid>
       <description></description>
     </item>
     <item>
       <title>Cate1</title>
-      <link>//localhost:1313/categories/cate1/</link>
+      <link>http://localhost:1313/echo-hugo/categories/cate1/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/cate1/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/cate1/</guid>
       <description></description>
     </item>
     <item>
       <title>Cate2</title>
-      <link>//localhost:1313/categories/cate2/</link>
+      <link>http://localhost:1313/echo-hugo/categories/cate2/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/cate2/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/cate2/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>//localhost:1313/categories/git/</link>
+      <link>http://localhost:1313/echo-hugo/categories/git/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/git/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/git/</guid>
       <description></description>
     </item>
     <item>
       <title>NativePHP</title>
-      <link>//localhost:1313/categories/nativephp/</link>
+      <link>http://localhost:1313/echo-hugo/categories/nativephp/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/nativephp/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/nativephp/</guid>
       <description></description>
     </item>
     <item>
       <title>Startup</title>
-      <link>//localhost:1313/categories/startup/</link>
+      <link>http://localhost:1313/echo-hugo/categories/startup/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/startup/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/startup/</guid>
       <description></description>
     </item>
     <item>
       <title>Thoughts</title>
-      <link>//localhost:1313/categories/thoughts/</link>
+      <link>http://localhost:1313/echo-hugo/categories/thoughts/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/thoughts/</guid>
+      <guid>http://localhost:1313/echo-hugo/categories/thoughts/</guid>
       <description></description>
     </item>
   </channel>

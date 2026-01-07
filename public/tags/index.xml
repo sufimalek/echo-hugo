@@ -2,227 +2,227 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Mainroad</title>
-    <link>//localhost:1313/tags/</link>
+    <link>http://localhost:1313/echo-hugo/tags/</link>
     <description>Recent content in Tags on Mainroad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/echo-hugo/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang</title>
-      <link>//localhost:1313/tags/golang/</link>
+      <link>http://localhost:1313/echo-hugo/tags/golang/</link>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/golang/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/golang/</guid>
       <description></description>
     </item>
     <item>
       <title>Race-Condition</title>
-      <link>//localhost:1313/tags/race-condition/</link>
+      <link>http://localhost:1313/echo-hugo/tags/race-condition/</link>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/race-condition/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/race-condition/</guid>
       <description></description>
     </item>
     <item>
       <title>Kafka</title>
-      <link>//localhost:1313/tags/kafka/</link>
+      <link>http://localhost:1313/echo-hugo/tags/kafka/</link>
       <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/kafka/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/kafka/</guid>
       <description></description>
     </item>
     <item>
       <title>Laravel</title>
-      <link>//localhost:1313/tags/laravel/</link>
+      <link>http://localhost:1313/echo-hugo/tags/laravel/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/laravel/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/laravel/</guid>
       <description></description>
     </item>
     <item>
       <title>Php</title>
-      <link>//localhost:1313/tags/php/</link>
+      <link>http://localhost:1313/echo-hugo/tags/php/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/php/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/php/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>//localhost:1313/tags/docker/</link>
+      <link>http://localhost:1313/echo-hugo/tags/docker/</link>
       <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/docker/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>//localhost:1313/tags/go/</link>
+      <link>http://localhost:1313/echo-hugo/tags/go/</link>
       <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/go/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>FrankenPHP</title>
-      <link>//localhost:1313/tags/frankenphp/</link>
+      <link>http://localhost:1313/echo-hugo/tags/frankenphp/</link>
       <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/frankenphp/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/frankenphp/</guid>
       <description></description>
     </item>
     <item>
       <title>Arithmetic</title>
-      <link>//localhost:1313/tags/arithmetic/</link>
+      <link>http://localhost:1313/echo-hugo/tags/arithmetic/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/arithmetic/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/arithmetic/</guid>
       <description></description>
     </item>
     <item>
       <title>Precedency</title>
-      <link>//localhost:1313/tags/precedency/</link>
+      <link>http://localhost:1313/echo-hugo/tags/precedency/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/precedency/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/precedency/</guid>
       <description></description>
     </item>
     <item>
       <title>Browser</title>
-      <link>//localhost:1313/tags/browser/</link>
+      <link>http://localhost:1313/echo-hugo/tags/browser/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/browser/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/browser/</guid>
       <description></description>
     </item>
     <item>
       <title>Extension</title>
-      <link>//localhost:1313/tags/extension/</link>
+      <link>http://localhost:1313/echo-hugo/tags/extension/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/extension/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/extension/</guid>
       <description></description>
     </item>
     <item>
       <title>Mysql</title>
-      <link>//localhost:1313/tags/mysql/</link>
+      <link>http://localhost:1313/echo-hugo/tags/mysql/</link>
       <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/mysql/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/mysql/</guid>
       <description></description>
     </item>
     <item>
       <title>Featured</title>
-      <link>//localhost:1313/tags/featured/</link>
+      <link>http://localhost:1313/echo-hugo/tags/featured/</link>
       <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
-      <guid>//localhost:1313/tags/featured/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/featured/</guid>
       <description></description>
     </item>
     <item>
       <title>Go-Error-Handling</title>
-      <link>//localhost:1313/tags/go-error-handling/</link>
+      <link>http://localhost:1313/echo-hugo/tags/go-error-handling/</link>
       <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
-      <guid>//localhost:1313/tags/go-error-handling/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/go-error-handling/</guid>
       <description></description>
     </item>
     <item>
       <title>Go-Lang</title>
-      <link>//localhost:1313/tags/go-lang/</link>
+      <link>http://localhost:1313/echo-hugo/tags/go-lang/</link>
       <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
-      <guid>//localhost:1313/tags/go-lang/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/go-lang/</guid>
       <description></description>
     </item>
     <item>
       <title>Symfony</title>
-      <link>//localhost:1313/tags/symfony/</link>
+      <link>http://localhost:1313/echo-hugo/tags/symfony/</link>
       <pubDate>Tue, 01 Sep 2020 13:09:01 +0000</pubDate>
-      <guid>//localhost:1313/tags/symfony/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/symfony/</guid>
       <description></description>
     </item>
     <item>
       <title>Basic Elements</title>
-      <link>//localhost:1313/tags/basic-elements/</link>
+      <link>http://localhost:1313/echo-hugo/tags/basic-elements/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/basic-elements/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/basic-elements/</guid>
       <description></description>
     </item>
     <item>
       <title>CSS</title>
-      <link>//localhost:1313/tags/css/</link>
+      <link>http://localhost:1313/echo-hugo/tags/css/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/css/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>HTML</title>
-      <link>//localhost:1313/tags/html/</link>
+      <link>http://localhost:1313/echo-hugo/tags/html/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/html/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/html/</guid>
       <description></description>
     </item>
     <item>
       <title>Development</title>
-      <link>//localhost:1313/tags/development/</link>
+      <link>http://localhost:1313/echo-hugo/tags/development/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/development/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/development/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>//localhost:1313/tags/hugo/</link>
+      <link>http://localhost:1313/echo-hugo/tags/hugo/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/hugo/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Templates</title>
-      <link>//localhost:1313/tags/templates/</link>
+      <link>http://localhost:1313/echo-hugo/tags/templates/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/templates/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/templates/</guid>
       <description></description>
     </item>
     <item>
       <title>Themes</title>
-      <link>//localhost:1313/tags/themes/</link>
+      <link>http://localhost:1313/echo-hugo/tags/themes/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/themes/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/themes/</guid>
       <description></description>
     </item>
     <item>
       <title>Book</title>
-      <link>//localhost:1313/tags/book/</link>
+      <link>http://localhost:1313/echo-hugo/tags/book/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/book/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/book/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>//localhost:1313/tags/git/</link>
+      <link>http://localhost:1313/echo-hugo/tags/git/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/git/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Git-Squash</title>
-      <link>//localhost:1313/tags/git-squash/</link>
+      <link>http://localhost:1313/echo-hugo/tags/git-squash/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/git-squash/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/git-squash/</guid>
       <description></description>
     </item>
     <item>
       <title>Nativephp</title>
-      <link>//localhost:1313/tags/nativephp/</link>
+      <link>http://localhost:1313/echo-hugo/tags/nativephp/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/nativephp/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/nativephp/</guid>
       <description></description>
     </item>
     <item>
       <title>Startup</title>
-      <link>//localhost:1313/tags/startup/</link>
+      <link>http://localhost:1313/echo-hugo/tags/startup/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/startup/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/startup/</guid>
       <description></description>
     </item>
     <item>
       <title>Struct</title>
-      <link>//localhost:1313/tags/struct/</link>
+      <link>http://localhost:1313/echo-hugo/tags/struct/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/struct/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/struct/</guid>
       <description></description>
     </item>
     <item>
       <title>Thougths</title>
-      <link>//localhost:1313/tags/thougths/</link>
+      <link>http://localhost:1313/echo-hugo/tags/thougths/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/thougths/</guid>
+      <guid>http://localhost:1313/echo-hugo/tags/thougths/</guid>
       <description></description>
     </item>
   </channel>
