@@ -1,0 +1,37 @@
+
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "My Developer Blog"
+theme = "mainroad"
+paginate = 10
+
+[params]
+  description = "A developer's blog sharing programming tips and insights."
+  author = "Sufiyan Malek"
+  readmore = true
+  authorbox = true
+  toc = true
+  pager = true
+  post_meta = ["date", "categories", "tags"]
+  highlightjs = true
+  highlightjsStyle = "monokai-sublime"
+  customCSS = ["css/custom.css"]
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3

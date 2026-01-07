@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unlocking the Power of Full-Text Search in MySQL - Mainroad</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Unlocking the Power of Full-Text Search in MySQL" />
+<meta property="og:description" content="What is Full-Text Search in MySQL? FFull-Text Search (FTS) in MySQL is a specialized search functionality designed to handle large volumes of textual data efficiently. Unlike simple pattern matching using LIKE, FTS provides a more sophisticated and efficient way to search for words or phrases within text fields.
+Benefit word always attract to human being ;). So, First we will discuss about benefits of using Full-Text search. and after example of it with different types and then lastly use cases." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/post/2023-09-10-unlocking-the-power-of-full-text-search-in-mysql/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-09-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-10T00:00:00+00:00" />
+
+
+		<meta itemprop="name" content="Unlocking the Power of Full-Text Search in MySQL">
+<meta itemprop="description" content="What is Full-Text Search in MySQL? FFull-Text Search (FTS) in MySQL is a specialized search functionality designed to handle large volumes of textual data efficiently. Unlike simple pattern matching using LIKE, FTS provides a more sophisticated and efficient way to search for words or phrases within text fields.
+Benefit word always attract to human being ;). So, First we will discuss about benefits of using Full-Text search. and after example of it with different types and then lastly use cases."><meta itemprop="datePublished" content="2023-09-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-09-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="771">
+<meta itemprop="keywords" content="mysql," />
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Unlocking the Power of Full-Text Search in MySQL"/>
+<meta name="twitter:description" content="What is Full-Text Search in MySQL? FFull-Text Search (FTS) in MySQL is a specialized search functionality designed to handle large volumes of textual data efficiently. Unlike simple pattern matching using LIKE, FTS provides a more sophisticated and efficient way to search for words or phrases within text fields.
+Benefit word always attract to human being ;). So, First we will discuss about benefits of using Full-Text search. and after example of it with different types and then lastly use cases."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Sufiyan Malek" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Sufiyan Malek</div>
+					<div class="logo__tagline">Streamlined design, enhanced functionality</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/">
+				
+				<span class="menu__text">Categories</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/tags/">
+				
+				<span class="menu__text">Tags</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Unlocking the Power of Full-Text Search in MySQL</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sufiyan Malek</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2023-09-10T00:00:00Z">2023-09-10</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/mysql/" rel="category">MySQL</a>
+	</span>
+</div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-full-text-search-in-mysql">What is Full-Text Search in MySQL?</a></li>
+    <li><a href="#benefits-of-full-text-search-in-mysql">Benefits of Full-Text Search in MySQL</a>
+      <ul>
+        <li><a href="#1-efficient-text-indexing">1. <strong>Efficient Text Indexing</strong></a></li>
+        <li><a href="#2-natural-language-queries">2. <strong>Natural Language Queries</strong></a></li>
+        <li><a href="#3-partial-word-matching">3. <strong>Partial Word Matching</strong></a></li>
+        <li><a href="#4-boolean-searches">4. <strong>Boolean Searches</strong></a></li>
+        <li><a href="#5-relevance-ranking">5. <strong>Relevance Ranking</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#examples-of-full-text-search-queries">Examples of Full-Text Search Queries</a>
+      <ul>
+        <li><a href="#1-basic-full-text-search">1: Basic Full-Text Search</a></li>
+        <li><a href="#2-boolean-full-text-search">2: Boolean Full-Text Search</a></li>
+        <li><a href="#3-natural-language-full-text-search">3: Natural Language Full-Text Search</a></li>
+        <li><a href="#4-relevance-ranking">4: Relevance Ranking</a></li>
+      </ul>
+    </li>
+    <li><a href="#use-cases-of-full-text-search-in-mysql">Use Cases of Full-Text Search in MySQL</a>
+      <ul>
+        <li><a href="#content-management-systems-cms">Content Management Systems (CMS)</a></li>
+        <li><a href="#e-commerce-product-search">E-Commerce Product Search</a></li>
+        <li><a href="#document-management-systems">Document Management Systems</a></li>
+        <li><a href="#content-recommendation-systems">Content Recommendation Systems</a></li>
+        <li><a href="#discussion-forums">Discussion Forums</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="what-is-full-text-search-in-mysql">What is Full-Text Search in MySQL?</h2>
+<p><!-- raw HTML omitted -->F<!-- raw HTML omitted -->Full-Text Search (FTS) in MySQL is a specialized search functionality designed to handle large volumes of textual data efficiently. Unlike simple pattern matching using <code>LIKE</code>, <em>FTS</em> provides a more sophisticated and efficient way to search for words or phrases within text fields.</p>
+<p><strong>Benefit</strong> word always attract to human being ;). So, First we will discuss about benefits of using Full-Text search. and after example of it with different types and then lastly use cases.</p>
+<!-- raw HTML omitted -->
+<h2 id="benefits-of-full-text-search-in-mysql">Benefits of Full-Text Search in MySQL</h2>
+<h3 id="1-efficient-text-indexing">1. <strong>Efficient Text Indexing</strong></h3>
+<p>FTS creates indexes on text columns, significantly improving the speed and efficiency of text-based searches. Traditional &ldquo;LIKE&rdquo; queries can be slow and resource-intensive for large datasets, while FTS is optimized for text search operations.</p>
+<h3 id="2-natural-language-queries">2. <strong>Natural Language Queries</strong></h3>
+<p>MySQL&rsquo;s FTS supports natural language queries, enabling users to input search terms conversationally. This enhances the user experience and helps users find what they are looking for more easily.</p>
+<h3 id="3-partial-word-matching">3. <strong>Partial Word Matching</strong></h3>
+<p>FTS supports partial word matching and can find words that are similar to the search term using stemming and linguistic techniques. For example, searching for &ldquo;run&rdquo; might return results for &ldquo;running&rdquo; and &ldquo;runner.&rdquo;</p>
+<h3 id="4-boolean-searches">4. <strong>Boolean Searches</strong></h3>
+<p>FTS allows you to use Boolean operators like AND, OR, and NOT to create complex search queries, giving users the flexibility to perform advanced and precise searches.</p>
+<h3 id="5-relevance-ranking">5. <strong>Relevance Ranking</strong></h3>
+<p>Each search result in FTS is assigned a relevance score, allowing you to rank results by their relevance to the query. This ensures that users see the most relevant results first.</p>
+<!-- raw HTML omitted -->
+<h2 id="examples-of-full-text-search-queries">Examples of Full-Text Search Queries</h2>
+<p>Let&rsquo;s explore some examples of Full-Text Search queries in MySQL using different settings:</p>
+<p>First, create index on fields,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Create a full-text index on the relevant columns
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> articles
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ADD</span> FULLTEXT(title, content);
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h3 id="1-basic-full-text-search">1: Basic Full-Text Search</h3>
+<p>Suppose we have a table called <code>articles</code> with columns <code>title</code> and <code>content</code>. We can perform a basic FTS query as follows:</p>
+<h4 id="simple-term-search">Simple term search:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> articles
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">MATCH</span>(title, content) AGAINST(<span style="color:#e6db74">&#39;search term&#39;</span>);
+</span></span></code></pre></div><p>This query searches for the &lsquo;search term&rsquo; in both the <code>title</code> and <code>content</code> columns of the <code>articles</code> table.</p>
+<h4 id="phrase-search">Phrase search:</h4>
+<p>This type of search matches a specific phrase, word order and all. For example, the following query will find all documents that contain the phrase &ldquo;coffee maker&rdquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> articles 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">MATCH</span>(title, content) AGAINST(<span style="color:#e6db74">&#39;&#34;coffee maker&#34;&#39;</span>);
+</span></span></code></pre></div><h3 id="2-boolean-full-text-search">2: Boolean Full-Text Search</h3>
+<p>We can use Boolean operators for more complex queries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> articles
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">MATCH</span>(title, content) AGAINST(<span style="color:#e6db74">&#39;+MySQL +performance +database -NoSQL&#39;</span> <span style="color:#66d9ef">IN</span> BOOLEAN <span style="color:#66d9ef">MODE</span>);
+</span></span></code></pre></div><p>You can use Boolean operators to create more complex queries. For instance, to find articles that contain both &ldquo;MySQL&rdquo; and &ldquo;performance,&rdquo; but not &lsquo;NoSQL&rsquo; you can use:</p>
+<h3 id="3-natural-language-full-text-search">3: Natural Language Full-Text Search</h3>
+<p>MySQL supports natural language queries:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> articles
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">MATCH</span>(title) AGAINST(<span style="color:#e6db74">&#39;How to use Full-Text Search in MySQL&#39;</span> <span style="color:#66d9ef">IN</span> <span style="color:#66d9ef">NATURAL</span> <span style="color:#66d9ef">LANGUAGE</span> <span style="color:#66d9ef">MODE</span>);
+</span></span></code></pre></div><p>This query looks for articles with titles that closely match the natural language phrase.</p>
+<h3 id="4-relevance-ranking">4: Relevance Ranking</h3>
+<p>Find all articles that have the word &ldquo;coffee&rdquo; in their title or description, and rank the results by the relevance score:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> articles
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">MATCH</span>(title, content) AGAINST(<span style="color:#e6db74">&#39;coffee&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#66d9ef">MATCH</span>(title, content) AGAINST(<span style="color:#e6db74">&#39;coffee&#39;</span>) <span style="color:#66d9ef">DESC</span>;
+</span></span></code></pre></div><hr>
+<p>These are just a few examples of full-text search queries in MySQL. There are many other possibilities, depending on your specific needs.</p>
+<!-- raw HTML omitted -->
+<h2 id="use-cases-of-full-text-search-in-mysql">Use Cases of Full-Text Search in MySQL</h2>
+<h3 id="content-management-systems-cms">Content Management Systems (CMS)</h3>
+<p>In CMS platforms, users often need to search for articles, blog posts, or other textual content. FTS allows for quick and accurate content retrieval, enhancing the user experience.</p>
+<h3 id="e-commerce-product-search">E-Commerce Product Search</h3>
+<p>E-commerce websites rely heavily on search functionality. FTS helps users find products by searching product names, descriptions, and attributes, resulting in more sales and satisfied customers.</p>
+<h3 id="document-management-systems">Document Management Systems</h3>
+<p>Document management systems store vast amounts of textual documents. FTS facilitates searching within documents, helping users locate specific information within files.</p>
+<h3 id="content-recommendation-systems">Content Recommendation Systems</h3>
+<p>FTS, when combined with user profiling, can recommend relevant content based on search queries and user preferences, increasing user engagement.</p>
+<h3 id="discussion-forums">Discussion Forums</h3>
+<p>Discussion forums use FTS to allow users to search for relevant topics, posts, and conversations, making it easier to find answers to questions.</p>
+<!-- raw HTML omitted -->
+<h2 id="conclusion">Conclusion</h2>
+<p>Full-Text Search in MySQL is a versatile and powerful tool that can greatly enhance the search capabilities of your applications and databases. With its ability to perform efficient text indexing, support natural language queries, handle partial word matching, and rank results by relevance, it can benefit a wide range of use cases, from content management systems to e-commerce platforms and beyond. Understanding how to harness the capabilities of Full-Text Search in MySQL can lead to improved user experiences and more effective data retrieval in your applications.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/mysql/" rel="tag">mysql</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Sufiyan Malek avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Sufiyan Malek</span>
+	</div>
+	<div class="authorbox__description">
+		Sufiyan Malek&rsquo;s true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/post/2023-09-09-laravel-limiting-chunk-collection/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Laravel Limiting Chunk Collection: How to Chunk Results from a Custom Query</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/post/2023-09-15-creating-custom-browser-extensions/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Creating and Adding Custom Browser Extensions: A Step-by-Step Guide</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2026 Sufiyan Malek.
+			<span class="footer__copyright-credits">Built with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> ❤️ | <a href="https://github.com/sufimalek">GitHub</a></span>
+		</div>
+	</div>
+</footer>
+
+
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FrankenPHP on Mainroad</title>
+    <link>//localhost:1313/tags/frankenphp/</link>
+    <description>Recent content in FrankenPHP on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/frankenphp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FrankenPHP: A modern app server for PHP, written in Go</title>
+      <link>//localhost:1313/post/2023-12-08-frankenphp-modern-app-server-for-php-written-in-go/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-12-08-frankenphp-modern-app-server-for-php-written-in-go/</guid>
+      <description>FrankenPHP: A New Way to Run PHP Apps with Go {: style=&amp;ldquo;float: left&amp;rdquo;}&#xA;PHP is one of the most popular and widely used programming languages for web development. However, it also has some drawbacks, such as performance issues, lack of concurrency support, and dependency on external services like PHP-FPM or Apache.&#xA;What if there was a way to run PHP apps without these limitations, using the power and simplicity of Go?</description>
+    </item>
+  </channel>
+</rss>

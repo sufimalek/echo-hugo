@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Mainroad</title>
+    <link>//localhost:1313/tags/go/</link>
+    <description>Recent content in Go on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing Go deployment using Docker with scratch</title>
+      <link>//localhost:1313/post/2024-10-21-go-app-docker-with-scratch/</link>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2024-10-21-go-app-docker-with-scratch/</guid>
+      <description>Using the scratch image in Docker is a great way to create a super minimal image for your Go applications. The scratch image is an empty base image, meaning it contains absolutely nothing, not even basic utilities like bash. It&amp;rsquo;s ideal for Go applications that are statically compiled and don&amp;rsquo;t require any external dependencies.&#xA;Here’s a detailed example of how to use scratch with a Go application and a multi-stage build.</description>
+    </item>
+    <item>
+      <title>Go Applications using Docker with Multi-Stage Builds</title>
+      <link>//localhost:1313/post/2024-09-15-go-app-docker-mutistage-builds/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2024-09-15-go-app-docker-mutistage-builds/</guid>
+      <description>Optimizing Go Applications using Docker with Multi-Stage Builds What is Multi-Stage Docker Build? Multi-stage builds allow Docker to create optimized images by separating different phases of the build process into multiple steps (or stages). This method reduces the size of the final image and improves security by only including the necessary runtime components.&#xA;For a Go application, this means using a stage for compiling the source code and another stage for creating a minimal final image with only the compiled binary and necessary dependencies.</description>
+    </item>
+    <item>
+      <title>Go Lang Unmarshall show errors</title>
+      <link>//localhost:1313/post/2023-08-16-golang-unmarshall-show-errors/</link>
+      <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-08-16-golang-unmarshall-show-errors/</guid>
+      <description>When you are Unmarshalling JSON in GO, you would probably get some error at some time regarding JSON format, fields or value types etc,.&#xA;So, most of us using simple syntax of the error to handle the error like in below example,&#xA;{: .light .w-75 .shadow .rounded-10 w=&amp;lsquo;1212&amp;rsquo; h=&amp;lsquo;668&amp;rsquo; }&#xA;package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; ) type A struct { Name string Email string } func main() { var a A bs := []byte(`{&amp;#34;Name&amp;#34;:&amp;#34;hello&amp;#34;,&amp;#34;Email&amp;#34;:123}`) if e := json.</description>
+    </item>
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>//localhost:1313/post/hugo-template-primer/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/hugo-template-primer/</guid>
+      <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for&#xA;its template engine. It is an extremely lightweight engine that provides a very&#xA;small amount of logic. In our experience that it is just the right amount of&#xA;logic to be able to create a good static website. If you have used other&#xA;template systems from different languages or frameworks you will find a lot of&#xA;similarities in Go templates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>//localhost:1313/post/getting-started-with-hugo/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/getting-started-with-hugo/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.&#xA;Save it somewhere specific as we will be using it in the next step.&#xA;More complete instructions are available at Install Hugo&#xA;Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.&#xA;Follow the following steps:&#xA;Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313 Corresponding pseudo commands:</description>
+    </item>
+    <item>
+      <title>Embedding Struct in Go</title>
+      <link>//localhost:1313/post/2023-09-06-go-struct-embedding/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-09-06-go-struct-embedding/</guid>
+      <description>In Go, a struct is a composite data type that groups together variables (fields) under a single name. Structs are used to create custom data structures, similar to classes in other languages. You can also embed one struct within another struct to compose more complex data structures. This concept is known as &amp;ldquo;embedding&amp;rdquo; in Go.&#xA;Here&amp;rsquo;s an example of embedding in Go, along with its benefits, understanding, and conclusion:&#xA;Example of Embedding in Go: Let&amp;rsquo;s say you&amp;rsquo;re building a system to manage different types of vehicles.</description>
+    </item>
+    <item>
+      <title>Go Books</title>
+      <link>//localhost:1313/post/2023-06-11-go-books-dariubs/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-06-11-go-books-dariubs/</guid>
+      <description>Awesome Go Books Books Starter Books Advanced Books Web Development Resources Books Starter Books The Little Go Book Free The Little Go Book is a free introduction to Google&amp;rsquo;s Go programming language. It&amp;rsquo;s aimed at developers who might not be quite comfortable with the idea of pointers and static typing. It&amp;rsquo;s longer than the other Little books, but hopefully still captures that little feeling.&#xA;An Introduction to Programming in Go Free This book is a short, concise introduction to computer programming using the language Go.</description>
+    </item>
+  </channel>
+</rss>

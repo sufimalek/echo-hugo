@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Race-Condition on Mainroad</title>
+    <link>//localhost:1313/tags/race-condition/</link>
+    <description>Recent content in Race-Condition on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/race-condition/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Race Detector</title>
+      <link>//localhost:1313/post/2025-03-09-golang-go-race-detector/</link>
+      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2025-03-09-golang-go-race-detector/</guid>
+      <description>Setting Up and Using the Go Race Detector The Go race detector is a powerful tool for identifying race conditions in concurrent Go programs. Race conditions occur when two or more goroutines access shared data concurrently, and at least one of the accesses is a write. This article will guide you through setting up the Go race detector and provide a sample race condition example.&#xA;Prerequisites Before you begin, ensure you have the following:</description>
+    </item>
+  </channel>
+</rss>

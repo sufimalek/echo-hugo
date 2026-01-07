@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Go Applications using Docker with Multi-Stage Builds - Mainroad</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Go Applications using Docker with Multi-Stage Builds" />
+<meta property="og:description" content="Optimizing Go Applications using Docker with Multi-Stage Builds What is Multi-Stage Docker Build? Multi-stage builds allow Docker to create optimized images by separating different phases of the build process into multiple steps (or stages). This method reduces the size of the final image and improves security by only including the necessary runtime components.
+For a Go application, this means using a stage for compiling the source code and another stage for creating a minimal final image with only the compiled binary and necessary dependencies." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/post/2024-09-15-go-app-docker-mutistage-builds/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-09-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-09-15T00:00:00+00:00" />
+
+
+		<meta itemprop="name" content="Go Applications using Docker with Multi-Stage Builds">
+<meta itemprop="description" content="Optimizing Go Applications using Docker with Multi-Stage Builds What is Multi-Stage Docker Build? Multi-stage builds allow Docker to create optimized images by separating different phases of the build process into multiple steps (or stages). This method reduces the size of the final image and improves security by only including the necessary runtime components.
+For a Go application, this means using a stage for compiling the source code and another stage for creating a minimal final image with only the compiled binary and necessary dependencies."><meta itemprop="datePublished" content="2024-09-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-09-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="732">
+<meta itemprop="keywords" content="go," />
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Go Applications using Docker with Multi-Stage Builds"/>
+<meta name="twitter:description" content="Optimizing Go Applications using Docker with Multi-Stage Builds What is Multi-Stage Docker Build? Multi-stage builds allow Docker to create optimized images by separating different phases of the build process into multiple steps (or stages). This method reduces the size of the final image and improves security by only including the necessary runtime components.
+For a Go application, this means using a stage for compiling the source code and another stage for creating a minimal final image with only the compiled binary and necessary dependencies."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Sufiyan Malek" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Sufiyan Malek</div>
+					<div class="logo__tagline">Streamlined design, enhanced functionality</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/">
+				
+				<span class="menu__text">Categories</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/tags/">
+				
+				<span class="menu__text">Tags</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Go Applications using Docker with Multi-Stage Builds</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sufiyan Malek</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-09-15T00:00:00Z">2024-09-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/go/" rel="category">Go</a>, <a class="meta__link" href="/categories/docker/" rel="category">Docker</a>, <a class="meta__link" href="/categories/multi-stage/" rel="category">Multi-Stage</a>
+	</span>
+</div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#what-is-multi-stage-docker-build"><strong>What is Multi-Stage Docker Build?</strong></a></li>
+        <li><a href="#why-use-multi-stage-builds"><strong>Why Use Multi-Stage Builds?</strong></a></li>
+        <li><a href="#step-by-step-example-optimizing-a-go-application-with-multi-stage-docker-build"><strong>Step-by-Step Example: Optimizing a Go Application with Multi-Stage Docker Build</strong></a></li>
+        <li><a href="#conclusion"><strong>Conclusion</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<!-- raw HTML omitted -->
+<h1 id="optimizing-go-applications-using-docker-with-multi-stage-builds">Optimizing Go Applications using Docker with Multi-Stage Builds</h1>
+<h3 id="what-is-multi-stage-docker-build"><strong>What is Multi-Stage Docker Build?</strong></h3>
+<p>Multi-stage builds allow Docker to create optimized images by separating different phases of the build process into multiple steps (or stages). This method reduces the size of the final image and improves security by only including the necessary runtime components.</p>
+<p>For a Go application, this means using a <strong>stage for compiling the source code</strong> and <strong>another stage for creating a minimal final image with only the compiled binary and necessary dependencies</strong>. The intermediate artifacts used for building (such as Go compilers, libraries, or unnecessary files) are excluded from the final image, making it lightweight.</p>
+<h3 id="why-use-multi-stage-builds"><strong>Why Use Multi-Stage Builds?</strong></h3>
+<ul>
+<li>
+<p><strong>Smaller Image Size:</strong> By using multi-stage builds, the final image is much smaller since only the compiled Go binary and essential runtime dependencies are included.</p>
+</li>
+<li>
+<p><strong>Improved Security:</strong> Reducing the image size also reduces the attack surface. You avoid shipping unnecessary tools like compilers or build tools in the final production image.</p>
+</li>
+<li>
+<p><strong>Faster Deployments:</strong> Smaller images take less time to push to the Docker registry and pull to your servers, resulting in faster deployments.</p>
+</li>
+</ul>
+<h3 id="step-by-step-example-optimizing-a-go-application-with-multi-stage-docker-build"><strong>Step-by-Step Example: Optimizing a Go Application with Multi-Stage Docker Build</strong></h3>
+<p>Let’s consider a simple Go application that needs optimization for Docker deployment using multi-stage builds.</p>
+<h4 id="1-basic-go-application"><strong>1. Basic Go Application</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// main.go
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello, Optimized Go Application!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-dockerfile-for-multi-stage-build"><strong>2. Dockerfile for Multi-Stage Build</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#75715e"># Stage 1: Build the Go application</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> golang:1.18-alpine AS builder</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Set the working directory</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Copy the Go module files and download dependencies</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> go.mod go.sum ./<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> go mod download<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Copy the source code</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Build the Go application</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> go build -o optimized-app .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Stage 2: Create a minimal runtime image</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> alpine:latest</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Set the working directory</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Copy the compiled binary from the previous stage</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /app/optimized-app .<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Set the entrypoint to run the compiled binary</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENTRYPOINT</span> [<span style="color:#e6db74">&#34;./optimized-app&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h4 id="3-explanation-of-dockerfile"><strong>3. Explanation of Dockerfile</strong></h4>
+<p><strong>Stage 1: Builder Stage</strong></p>
+<ul>
+<li>
+<p><code>FROM golang:1.18-alpine AS builder</code>: The first stage uses a Golang image based on Alpine Linux. It’s a lightweight image with everything needed to compile the Go application.</p>
+</li>
+<li>
+<p><code>WORKDIR /app</code>: Set the working directory to <code>/app</code> inside the container.</p>
+</li>
+<li>
+<p><code>COPY go.mod go.sum ./</code>: The Go module files are copied to the container to manage dependencies.</p>
+</li>
+<li>
+<p><code>RUN go mod download</code>: This command downloads all the dependencies specified in <code>go.mod</code> and <code>go.sum</code>.</p>
+</li>
+<li>
+<p><code>COPY . .</code>: The source code is copied into the container.</p>
+</li>
+<li>
+<p><code>RUN go build -o optimized-app</code>: The Go application is built for Linux with CGO disabled to make the binary more portable and to avoid needing the C library at runtime.</p>
+</li>
+</ul>
+<p><strong>Stage 2: Minimal Runtime Stage</strong></p>
+<ul>
+<li>
+<p><code>FROM alpine:latest</code>: The second stage uses a minimal Alpine Linux base image that will contain only the compiled Go binary.</p>
+</li>
+<li>
+<p><code>WORKDIR /app</code>: Again, set the working directory to <code>/app</code> inside the runtime container.</p>
+</li>
+<li>
+<p><code>COPY --from=builder /app/optimized-app .</code>: The compiled binary from the first stage (<code>builder</code>) is copied into this minimal image.</p>
+</li>
+<li>
+<p><code>ENTRYPOINT [&quot;./optimized-app&quot;]</code>: Set the entry point of the container to the compiled Go binary.</p>
+</li>
+</ul>
+<h4 id="4-building-the-docker-image"><strong>4. Building the Docker Image</strong></h4>
+<p>Now that we have a Dockerfile ready for a multi-stage build, you can build the image with the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build -t optimized-go-app .
+</span></span></code></pre></div><h4 id="5-running-the-container"><strong>5. Running the Container</strong></h4>
+<p>Once the build is complete, you can run the container with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run --rm optimized-go-app
+</span></span></code></pre></div><p>You should see the output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Hello, Optimized Go Application!
+</span></span></code></pre></div><h4 id="6-verifying-the-optimization"><strong>6. Verifying the Optimization</strong></h4>
+<p>Let’s compare the size of an image built without a multi-stage build versus one that uses it. Here’s an example of what you might see:</p>
+<ul>
+<li><strong>Without multi-stage builds</strong>: 700 MB (includes Golang compiler, dependencies, and unnecessary build artifacts)</li>
+<li><strong>With multi-stage builds</strong>: 10 MB (only the binary and essential runtime dependencies)</li>
+</ul>
+<p>By using multi-stage builds, we’ve reduced the size of the image dramatically, making it quicker to deploy and more efficient.</p>
+<hr>
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+<p>Optimizing Go applications using Docker with multi-stage builds is a powerful approach to reducing the image size, improving security, and speeding up deployments. By splitting the build and runtime environments, you only include what’s necessary in the final image, making it more efficient. This method is easy to implement and can significantly improve your Go application deployment pipeline.</p>
+<p>Try implementing multi-stage builds in your own projects and see the benefits of smaller, faster, and more secure Docker images.</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li>1 <a href="https://docs.docker.com/build/building/multi-stage/">Docker : Multi-stage builds.</a></li>
+</ul>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/go/" rel="tag">go</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Sufiyan Malek avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Sufiyan Malek</span>
+	</div>
+	<div class="authorbox__description">
+		Sufiyan Malek&rsquo;s true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/post/2023-12-08-frankenphp-modern-app-server-for-php-written-in-go/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">FrankenPHP: A modern app server for PHP, written in Go</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/post/2024-10-21-go-app-docker-with-scratch/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Optimizing Go deployment using Docker with scratch</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2026 Sufiyan Malek.
+			<span class="footer__copyright-credits">Built with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> ❤️ | <a href="https://github.com/sufimalek">GitHub</a></span>
+		</div>
+	</div>
+</footer>
+
+
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

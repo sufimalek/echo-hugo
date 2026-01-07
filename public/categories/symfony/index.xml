@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Symfony on Mainroad</title>
+    <link>//localhost:1313/categories/symfony/</link>
+    <description>Recent content in Symfony on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Sep 2020 13:09:01 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/symfony/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Benefits of Symfony that make it popular PHP framework</title>
+      <link>//localhost:1313/post/2020-09-01-benefits-of-symfony-that-make-it-popular-php-framework/</link>
+      <pubDate>Tue, 01 Sep 2020 13:09:01 +0000</pubDate>
+      <guid>//localhost:1313/post/2020-09-01-benefits-of-symfony-that-make-it-popular-php-framework/</guid>
+      <description>developers would much rather work with a framework that simplifies both their life and their daily work.&#xA;Many developers and programmers have shown great interest in websites and applications development in recent years. In this era whereby Internet technology is transforming every sector in the economy.&#xA;Internet innovation has contributed to growth of web development industry. For a website or application to work efficiently and properly, web developers needs to focus on using the right frameworks with proper functionality and reliability and I think that all had with Symfony PHP framework</description>
+    </item>
+    <item>
+      <title>Most Useful Symfony Bundles</title>
+      <link>//localhost:1313/post/2020-09-08-most-useful-symfony-bundles/</link>
+      <pubDate>Sun, 08 Sep 2019 13:09:01 +0000</pubDate>
+      <guid>//localhost:1313/post/2020-09-08-most-useful-symfony-bundles/</guid>
+      <description>“Symfony is basically a collection of high-quality components and bundles”.&#xA;Bundles which help you in starting your symfony application and will help you develop a project with Symfony&#xA;This evening I made a list of the bundles that I always end up installing in the projects that I develop with Symfony. They are not all, but I think that because of the functionality they provide and the versatility they offer when configuring them, it was worth talking a little about them.</description>
+    </item>
+  </channel>
+</rss>

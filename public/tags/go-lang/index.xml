@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go-Lang on Mainroad</title>
+    <link>//localhost:1313/tags/go-lang/</link>
+    <description>Recent content in Go-Lang on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2023 13:09:01 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/go-lang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Lang Unmarshall show errors</title>
+      <link>//localhost:1313/post/2023-08-16-golang-unmarshall-show-errors/</link>
+      <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-08-16-golang-unmarshall-show-errors/</guid>
+      <description>When you are Unmarshalling JSON in GO, you would probably get some error at some time regarding JSON format, fields or value types etc,.&#xA;So, most of us using simple syntax of the error to handle the error like in below example,&#xA;{: .light .w-75 .shadow .rounded-10 w=&amp;lsquo;1212&amp;rsquo; h=&amp;lsquo;668&amp;rsquo; }&#xA;package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; ) type A struct { Name string Email string } func main() { var a A bs := []byte(`{&amp;#34;Name&amp;#34;:&amp;#34;hello&amp;#34;,&amp;#34;Email&amp;#34;:123}`) if e := json.</description>
+    </item>
+    <item>
+      <title>Embedding Struct in Go</title>
+      <link>//localhost:1313/post/2023-09-06-go-struct-embedding/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-09-06-go-struct-embedding/</guid>
+      <description>In Go, a struct is a composite data type that groups together variables (fields) under a single name. Structs are used to create custom data structures, similar to classes in other languages. You can also embed one struct within another struct to compose more complex data structures. This concept is known as &amp;ldquo;embedding&amp;rdquo; in Go.&#xA;Here&amp;rsquo;s an example of embedding in Go, along with its benefits, understanding, and conclusion:&#xA;Example of Embedding in Go: Let&amp;rsquo;s say you&amp;rsquo;re building a system to manage different types of vehicles.</description>
+    </item>
+    <item>
+      <title>Go Books</title>
+      <link>//localhost:1313/post/2023-06-11-go-books-dariubs/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-06-11-go-books-dariubs/</guid>
+      <description>Awesome Go Books Books Starter Books Advanced Books Web Development Resources Books Starter Books The Little Go Book Free The Little Go Book is a free introduction to Google&amp;rsquo;s Go programming language. It&amp;rsquo;s aimed at developers who might not be quite comfortable with the idea of pointers and static typing. It&amp;rsquo;s longer than the other Little books, but hopefully still captures that little feeling.&#xA;An Introduction to Programming in Go Free This book is a short, concise introduction to computer programming using the language Go.</description>
+    </item>
+  </channel>
+</rss>

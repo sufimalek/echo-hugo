@@ -1,0 +1,5 @@
+# Footer
+- id: footer_credits
+  translation:
+    "Built with <a href=\"https://gohugo.io/\" rel=\"nofollow noopener\" target=\"_blank\">Hugo</a> ❤️ | <a href=\"https://github.com/sufimalek\">GitHub</a>"
+    # "Built with Hugo ❤️ | <a href=\"/about/\">About</a> | <a href=\"https://github.com/sufimalek\">GitHub</a>"

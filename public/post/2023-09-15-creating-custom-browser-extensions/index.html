@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Creating and Adding Custom Browser Extensions: A Step-by-Step Guide - Mainroad</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Creating and Adding Custom Browser Extensions: A Step-by-Step Guide" />
+<meta property="og:description" content="Creating a custom browser extension can be a rewarding project, as it allows you to add functionality to your web browser tailored to your needs. In this blog post, we&rsquo;ll walk through the process of creating and adding a custom browser extension for Google Chrome.
+Introduction
+Browser extensions have revolutionized the way we interact with web browsers. They empower users to customize their browsing experience, add new features, and boost productivity." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/post/2023-09-15-creating-custom-browser-extensions/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-09-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-15T00:00:00+00:00" />
+
+
+		<meta itemprop="name" content="Creating and Adding Custom Browser Extensions: A Step-by-Step Guide">
+<meta itemprop="description" content="Creating a custom browser extension can be a rewarding project, as it allows you to add functionality to your web browser tailored to your needs. In this blog post, we&rsquo;ll walk through the process of creating and adding a custom browser extension for Google Chrome.
+Introduction
+Browser extensions have revolutionized the way we interact with web browsers. They empower users to customize their browsing experience, add new features, and boost productivity."><meta itemprop="datePublished" content="2023-09-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-09-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="780">
+<meta itemprop="keywords" content="browser,extension," />
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Creating and Adding Custom Browser Extensions: A Step-by-Step Guide"/>
+<meta name="twitter:description" content="Creating a custom browser extension can be a rewarding project, as it allows you to add functionality to your web browser tailored to your needs. In this blog post, we&rsquo;ll walk through the process of creating and adding a custom browser extension for Google Chrome.
+Introduction
+Browser extensions have revolutionized the way we interact with web browsers. They empower users to customize their browsing experience, add new features, and boost productivity."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Sufiyan Malek" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Sufiyan Malek</div>
+					<div class="logo__tagline">Streamlined design, enhanced functionality</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/">
+				
+				<span class="menu__text">Categories</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/tags/">
+				
+				<span class="menu__text">Tags</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Creating and Adding Custom Browser Extensions: A Step-by-Step Guide</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sufiyan Malek</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2023-09-15T00:00:00Z">2023-09-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/extension/" rel="category">Extension</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p><!-- raw HTML omitted -->C<!-- raw HTML omitted -->reating a custom browser extension can be a rewarding project, as it allows you to add functionality to your web browser tailored to your needs. In this blog post, we&rsquo;ll walk through the process of creating and adding a custom browser extension for Google Chrome.</p>
+<p><strong>Introduction</strong></p>
+<p>Browser extensions have revolutionized the way we interact with web browsers. They empower users to customize their browsing experience, add new features, and boost productivity. In this step-by-step guide, we will explore how to create and add your own custom browser extension. We&rsquo;ll use Google Chrome as our target browser and provide a practical example to illustrate the process.</p>
+<p><strong>Why Create a Custom Browser Extension?</strong></p>
+<p>Before we dive into the technical aspects, let&rsquo;s briefly discuss why you might want to create a custom browser extension:</p>
+<ol>
+<li><strong>Personalization:</strong> Tailor your browsing experience to your specific needs and preferences.</li>
+<li><strong>Automation:</strong> Simplify repetitive tasks by automating actions on websites.</li>
+<li><strong>Learning Opportunity:</strong> Develop your web development skills while creating something practical.</li>
+<li><strong>Solving Unique Problems:</strong> Address specific challenges or enhance websites that you frequently use.</li>
+</ol>
+<p><strong>Getting Started</strong></p>
+<p>To embark on this journey, you&rsquo;ll need:</p>
+<ol>
+<li><strong>Development Environment:</strong> A text editor for writing code.</li>
+<li><strong>Google Chrome:</strong> The browser where we&rsquo;ll test our extension.</li>
+<li><strong>HTML, CSS, and JavaScript Knowledge:</strong> Familiarity with web development basics.</li>
+</ol>
+<p><strong>Example: Creating a Custom &ldquo;Quick Search&rdquo; Extension</strong></p>
+<p>In this guide, we&rsquo;ll create a custom browser extension called &ldquo;Quick Search.&rdquo; This extension will allow you to select text on a webpage and quickly search for it using your preferred search engine. Let&rsquo;s break down the process step by step:</p>
+<p><strong>Step 1: Setting Up Your Extension Directory</strong></p>
+<ol>
+<li>
+<p>Create a directory for your extension. Let&rsquo;s call it &ldquo;quicksearch-extension.&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mkdir quicksearch-extension
+</span></span><span style="display:flex;"><span>cd quicksearch-extension
+</span></span></code></pre></div></li>
+</ol>
+<p><strong>Step 2: Manifest File</strong></p>
+<ol start="2">
+<li>
+<p>Create a <code>manifest.json</code> file to define your extension&rsquo;s metadata, permissions, and scripts. This is the heart of your extension. Below is an example manifest file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;manifest_version&#34;</span>: <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Quick Search&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Search selected text quickly.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;permissions&#34;</span>: [<span style="color:#e6db74">&#34;activeTab&#34;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;action&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;default_popup&#34;</span>: <span style="color:#e6db74">&#34;popup.html&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;default_title&#34;</span>: <span style="color:#e6db74">&#34;Quick Search&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;permissions&#34;</span>: [<span style="color:#e6db74">&#34;activeTab&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This manifest file provides essential information about your extension, including its name, description, version, icons, and scripts.</p>
+</li>
+</ol>
+<p><strong>Step 3: HTML, CSS, and JavaScript Files</strong></p>
+<ol start="3">
+<li>
+<p>Create the HTML, CSS, and JavaScript files for your extension&rsquo;s user interface and functionality.</p>
+<ul>
+<li><code>popup.html</code>: The HTML file for your extension&rsquo;s popup UI.</li>
+<li><code>popup.css</code>: The CSS file to style the popup.</li>
+<li><code>popup.js</code>: The JavaScript file to add functionality to the popup.</li>
+</ul>
+<p>We&rsquo;ll focus on the <code>popup.html</code> file for now:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- popup.html --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">title</span>&gt;Quick Search&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;popup.css&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;Quick Search&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;searchInput&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Search...&#34;</span>/&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;searchButton&#34;</span>&gt;Search&lt;/<span style="color:#f92672">button</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;popup.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>Here, we&rsquo;ve created a basic popup with an input field and a search button.</p>
+</li>
+</ol>
+<p><strong>Step 4: Adding Functionality</strong></p>
+<ol start="4">
+<li>
+<p>To add functionality to your extension, create a <code>popup.js</code> file and specify it in your manifest file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;popup&#34;</span>: <span style="color:#e6db74">&#34;popup.html&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;scripts&#34;</span>: [<span style="color:#e6db74">&#34;popup.js&#34;</span>]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In <code>popup.js</code>, you can add code to handle user interactions and perform actions. Here&rsquo;s a simple example that searches Google when the user clicks the search button:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// popup.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;DOMContentLoaded&#39;</span>, <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">searchInput</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;searchInput&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">searchButton</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;searchButton&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">searchButton</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">searchText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">searchInput</span>.<span style="color:#a6e22e">value</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">searchText</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">searchURL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`https://www.google.com/search?q=</span><span style="color:#e6db74">${</span>encodeURIComponent(<span style="color:#a6e22e">searchText</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">chrome</span>.<span style="color:#a6e22e">tabs</span>.<span style="color:#a6e22e">query</span>({ <span style="color:#a6e22e">active</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">currentWindow</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">tabs</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">chrome</span>.<span style="color:#a6e22e">tabs</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">tabs</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">id</span>, { <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">searchURL</span> });
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>This JavaScript code adds an event listener to the search button and triggers a Google search with the entered text.</p>
+</li>
+</ol>
+<p><strong>Step 5: Testing Your Extension</strong></p>
+<ol start="5">
+<li>
+<p>Load your extension locally for testing:</p>
+<ul>
+<li>Open Google Chrome.</li>
+<li>Visit <code>chrome://extensions/</code>.</li>
+<li>Enable &ldquo;Developer mode&rdquo; in the top right corner.</li>
+<li>Click &ldquo;Load unpacked&rdquo; and select your extension directory.</li>
+</ul>
+<p>Your extension icon should now appear in the Chrome toolbar.</p>
+</li>
+</ol>
+<p><strong>Step 6: Debugging Your Extension</strong></p>
+<ol start="6">
+<li>For debugging, you can use Chrome DevTools. Right-click your extension&rsquo;s icon and select &ldquo;Inspect.&rdquo; Use the DevTools console to view logs and debug your code.</li>
+</ol>
+<p><strong>Step 7: Publishing Your Extension</strong></p>
+<ol start="7">
+<li>
+<p>To share your extension with others, you can publish it on the Chrome Web Store. Follow these steps:</p>
+<ul>
+<li>Visit the <a href="https://chrome.google.com/webstore/devconsole">Chrome Web Store Developer Dashboard</a>.</li>
+<li>Click &ldquo;Add a New Item&rdquo; and follow the submission process.</li>
+<li>Fill in all required details, upload your extension package (ZIP file), and wait for the review process to complete.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Conclusion</strong></p>
+<p>Creating and adding a custom browser extension can be a fun and rewarding project. In this guide, we&rsquo;ve walked through the process of creating a simple &ldquo;Quick Search&rdquo; extension for Google Chrome, but the sky&rsquo;s the limit when it comes to the functionalities you can add to your custom extensions. Whether you&rsquo;re developing for personal use or considering sharing your creation with the world, custom browser extensions are a powerful tool for enhancing your online experience. Happy coding!</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/browser/" rel="tag">browser</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/extension/" rel="tag">extension</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Sufiyan Malek avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Sufiyan Malek</span>
+	</div>
+	<div class="authorbox__description">
+		Sufiyan Malek&rsquo;s true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/post/2023-09-10-unlocking-the-power-of-full-text-search-in-mysql/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Unlocking the Power of Full-Text Search in MySQL</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/post/2023-09-22-arithmetic-operator-precedency/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Understanding Arithmetic Operator Precedence and Associativity</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2026 Sufiyan Malek.
+			<span class="footer__copyright-credits">Built with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> ❤️ | <a href="https://github.com/sufimalek">GitHub</a></span>
+		</div>
+	</div>
+</footer>
+
+
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

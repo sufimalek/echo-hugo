@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on Mainroad</title>
+    <link>//localhost:1313/categories/php/</link>
+    <description>Recent content in Php on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Extending Laravel Eloquent with Custom Relations: A Complete Guide</title>
+      <link>//localhost:1313/post/2024-11-24-extending-laravel-eloquent-for-custom-data/</link>
+      <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2024-11-24-extending-laravel-eloquent-for-custom-data/</guid>
+      <description>Laravel&amp;rsquo;s Eloquent ORM is powerful, offering various relationship types (hasOne, belongsTo, etc.). However, sometimes your data isn&amp;rsquo;t stored in a database, such as when you&amp;rsquo;re dealing with APIs, static arrays, or non-traditional data sources. In these cases, you can extend Eloquent with custom relations.&#xA;This article will guide you through creating a custom relation, with detailed explanations of how methods like getResults and match work.&#xA;What Are Custom Relations? A custom relation allows you to define how related data is retrieved for a model.</description>
+    </item>
+    <item>
+      <title>FrankenPHP: A modern app server for PHP, written in Go</title>
+      <link>//localhost:1313/post/2023-12-08-frankenphp-modern-app-server-for-php-written-in-go/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-12-08-frankenphp-modern-app-server-for-php-written-in-go/</guid>
+      <description>FrankenPHP: A New Way to Run PHP Apps with Go {: style=&amp;ldquo;float: left&amp;rdquo;}&#xA;PHP is one of the most popular and widely used programming languages for web development. However, it also has some drawbacks, such as performance issues, lack of concurrency support, and dependency on external services like PHP-FPM or Apache.&#xA;What if there was a way to run PHP apps without these limitations, using the power and simplicity of Go?</description>
+    </item>
+    <item>
+      <title>PHP 8.3 typed class constants, a json_validate function, override attribute and more</title>
+      <link>//localhost:1313/post/2023-11-24-php-8.3-features/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-11-24-php-8.3-features/</guid>
+      <description>The PHP team has released PHP 8.3 this week with typed class constants, a json_validate() function, dynamically fetching a class constant, the #[Override] attribute, and more:&#xA;Typed Class Constants What are typed class constants?&#xA;Typed class constants are a new feature in PHP 8.3 that allows you to specify the data type of a constant directly within the class definition. This enhances type safety, improves code readability, and facilitates static analysis tools.</description>
+    </item>
+    <item>
+      <title>Laravel Limiting Chunk Collection: How to Chunk Results from a Custom Query</title>
+      <link>//localhost:1313/post/2023-09-09-laravel-limiting-chunk-collection/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-09-09-laravel-limiting-chunk-collection/</guid>
+      <description>Laravel Limiting Chunk Collection: How to Chunk Results from a Custom Query Laravel, the popular PHP framework, offers a plethora of features that make working with databases a breeze. One such feature is the ability to chunk large query results into smaller, more manageable pieces. This comes in handy when dealing with large datasets that could otherwise cause memory issues or performance bottlenecks. In this blog post, we&amp;rsquo;ll explore the chunk method in Laravel, specifically focusing on how to chunk results from a custom query using the chunk method.</description>
+    </item>
+    <item>
+      <title>NativePHP is a new way to build native applications</title>
+      <link>//localhost:1313/post/2023-08-25-php-native-news/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-08-25-php-native-news/</guid>
+      <description>NativePHP is a new way to build native applications, using the tools you already know&#xA;NativePHP is a new framework for rapidly building rich, native desktop applications using PHP. If you&amp;rsquo;re already a PHP developer, you&amp;rsquo;ll feel right at home. If you&amp;rsquo;re new to PHP, we think you&amp;rsquo;ll find NativePHP easy to pick up and use. Whatever your path, we think you&amp;rsquo;re going to be productive quickly.&#xA;NativePHP is taking the world by storm, enabling PHP developers to create true cross-platform, native apps using the tools and technologies they already know: HTML, CSS, Javascript, and, of course, PHP.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go-Error-Handling on Mainroad</title>
+    <link>//localhost:1313/tags/go-error-handling/</link>
+    <description>Recent content in Go-Error-Handling on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2023 13:09:01 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/go-error-handling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Lang Unmarshall show errors</title>
+      <link>//localhost:1313/post/2023-08-16-golang-unmarshall-show-errors/</link>
+      <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-08-16-golang-unmarshall-show-errors/</guid>
+      <description>When you are Unmarshalling JSON in GO, you would probably get some error at some time regarding JSON format, fields or value types etc,.&#xA;So, most of us using simple syntax of the error to handle the error like in below example,&#xA;{: .light .w-75 .shadow .rounded-10 w=&amp;lsquo;1212&amp;rsquo; h=&amp;lsquo;668&amp;rsquo; }&#xA;package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; ) type A struct { Name string Email string } func main() { var a A bs := []byte(`{&amp;#34;Name&amp;#34;:&amp;#34;hello&amp;#34;,&amp;#34;Email&amp;#34;:123}`) if e := json.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thougths on Mainroad</title>
+    <link>//localhost:1313/tags/thougths/</link>
+    <description>Recent content in Thougths on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/thougths/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be Painkiller - For startup</title>
+      <link>//localhost:1313/post/2023-06-13-be-painkiller/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-06-13-be-painkiller/</guid>
+      <description>The saying,&#xA;“Don’t be an Ayurveda medicine, be a pain killer,”&#xA;is a good analogy for the benefits of working quickly. Ayurveda medicine is often referred to as slow-acting and can take days or even weeks to produce results. Pain killers, on the other hand, are fast-acting and can provide relief from pain almost immediately. In the same way, working quickly can provide immediate results, while working slowly can take a long time to produce results.</description>
+    </item>
+  </channel>
+</rss>

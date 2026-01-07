@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Book on Mainroad</title>
+    <link>//localhost:1313/tags/book/</link>
+    <description>Recent content in Book on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Books</title>
+      <link>//localhost:1313/post/2023-06-11-go-books-dariubs/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/post/2023-06-11-go-books-dariubs/</guid>
+      <description>Awesome Go Books Books Starter Books Advanced Books Web Development Resources Books Starter Books The Little Go Book Free The Little Go Book is a free introduction to Google&amp;rsquo;s Go programming language. It&amp;rsquo;s aimed at developers who might not be quite comfortable with the idea of pointers and static typing. It&amp;rsquo;s longer than the other Little books, but hopefully still captures that little feeling.&#xA;An Introduction to Programming in Go Free This book is a short, concise introduction to computer programming using the language Go.</description>
+    </item>
+  </channel>
+</rss>
