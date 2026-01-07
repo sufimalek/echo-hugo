@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Mainroad</title>
+    <link>https://sufimalek.github.io/echo-hugo/categories/docker/</link>
+    <description>Recent content in Docker on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sufimalek.github.io/echo-hugo/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing Go deployment using Docker with scratch</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2024-10-21-go-app-docker-with-scratch/</link>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2024-10-21-go-app-docker-with-scratch/</guid>
+      <description>Using the scratch image in Docker is a great way to create a super minimal image for your Go applications. The scratch image is an empty base image, meaning it contains absolutely nothing, not even basic utilities like bash. It&amp;rsquo;s ideal for Go applications that are statically compiled and don&amp;rsquo;t require any external dependencies.&#xA;Here’s a detailed example of how to use scratch with a Go application and a multi-stage build.</description>
+    </item>
+    <item>
+      <title>Go Applications using Docker with Multi-Stage Builds</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2024-09-15-go-app-docker-mutistage-builds/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2024-09-15-go-app-docker-mutistage-builds/</guid>
+      <description>Optimizing Go Applications using Docker with Multi-Stage Builds What is Multi-Stage Docker Build? Multi-stage builds allow Docker to create optimized images by separating different phases of the build process into multiple steps (or stages). This method reduces the size of the final image and improves security by only including the necessary runtime components.&#xA;For a Go application, this means using a stage for compiling the source code and another stage for creating a minimal final image with only the compiled binary and necessary dependencies.</description>
+    </item>
+  </channel>
+</rss>

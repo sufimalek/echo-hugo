@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mainroad</title>
+    <link>https://sufimalek.github.io/echo-hugo/</link>
+    <description>Recent content on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sufimalek.github.io/echo-hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Race Detector</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2025-03-09-golang-go-race-detector/</link>
+      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2025-03-09-golang-go-race-detector/</guid>
+      <description>Setting Up and Using the Go Race Detector The Go race detector is a powerful tool for identifying race conditions in concurrent Go programs. Race conditions occur when two or more goroutines access shared data concurrently, and at least one of the accesses is a write. This article will guide you through setting up the Go race detector and provide a sample race condition example.&#xA;Prerequisites Before you begin, ensure you have the following:</description>
+    </item>
+    <item>
+      <title>context in Golang</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2025-02-05-golang-context/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2025-02-05-golang-context/</guid>
+      <description>Q: What is context in Golang?&#xA;⭐ Answer:&#xA;In Go, the context package provides a way to control and manage the lifetime, deadlines, timeouts, and cancellation of goroutines, making it essential for handling long-running operations and request-scoped data.&#xA;Why is context needed? When working with concurrent operations like HTTP requests, database calls, or background tasks, we often need to:&#xA;Set timeouts to avoid indefinitely running processes. Propagate cancellations to prevent resource leaks.</description>
+    </item>
+    <item>
+      <title>pointers in Golang</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2025-02-05-golang-pointers/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2025-02-05-golang-pointers/</guid>
+      <description>Q: What are pointers in Go, and what are their uses?&#xA;⭐ Answer:&#xA;In Go, a pointer is a variable that stores the memory address of another variable, rather than the value itself. Pointers allow you to reference and manipulate variables indirectly, making them a powerful tool in Go programming.&#xA;How Pointers Work: When you declare a variable, the pointer holds the memory address of that variable, rather than the actual value.</description>
+    </item>
+    <item>
+      <title>Rate Limiter in Golang</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2025-02-05-golang-rate-limiter/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2025-02-05-golang-rate-limiter/</guid>
+      <description>Rate limiting in Go refers to the practice of controlling the rate at which certain actions or requests can be made over a given period of time. It is commonly used in networking, APIs, and services to ensure that resources are not overwhelmed by too many requests within a short time frame.&#xA;Rate limiting is essential for:&#xA;Preventing abuse (e.g., preventing DDoS attacks or excessive API calls) Ensuring fair usage of resources (e.</description>
+    </item>
+    <item>
+      <title>Kafka Consumer Groups</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2025-02-04-kafka-consumer-groups/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2025-02-04-kafka-consumer-groups/</guid>
+      <description>The GroupID in Kafka is used to define a consumer group, which is a key concept in Kafka for managing how messages are consumed from topics. Here&amp;rsquo;s a detailed explanation of what GroupID: &amp;ldquo;fraud-detector&amp;rdquo; means in the context of below application code: package main import ( &amp;#34;context&amp;#34; &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; &amp;#34;time&amp;#34; &amp;#34;github.com/segmentio/kafka-go&amp;#34; ) type Transaction struct { TransactionID string `json:&amp;#34;transaction_id&amp;#34;` UserID string `json:&amp;#34;user_id&amp;#34;` Amount float64 `json:&amp;#34;amount&amp;#34;` Location string `json:&amp;#34;location&amp;#34;` Timestamp string `json:&amp;#34;timestamp&amp;#34;` } func main() { // Initialize Kafka reader (consumer) reader := kafka.</description>
+    </item>
+    <item>
+      <title>Understanding Apache Kafka Core Concepts</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2025-01-25-kafka-core-concepts/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2025-01-25-kafka-core-concepts/</guid>
+      <description>Apache Kafka Core Concepts Apache Kafka is a distributed streaming platform that is widely used for building real-time data pipelines and streaming applications. It is designed to handle high throughput, fault tolerance, and scalability. In this article, we will explore the core concepts of Kafka, along with some advanced topics, and provide examples in Golang to help you understand how to work with Kafka.&#xA;1. Topics A topic in Kafka is a category or feed name to which messages are sent by producers.</description>
+    </item>
+    <item>
+      <title>Extending Laravel Eloquent with Custom Relations: A Complete Guide</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2024-11-24-extending-laravel-eloquent-for-custom-data/</link>
+      <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2024-11-24-extending-laravel-eloquent-for-custom-data/</guid>
+      <description>Laravel&amp;rsquo;s Eloquent ORM is powerful, offering various relationship types (hasOne, belongsTo, etc.). However, sometimes your data isn&amp;rsquo;t stored in a database, such as when you&amp;rsquo;re dealing with APIs, static arrays, or non-traditional data sources. In these cases, you can extend Eloquent with custom relations.&#xA;This article will guide you through creating a custom relation, with detailed explanations of how methods like getResults and match work.&#xA;What Are Custom Relations? A custom relation allows you to define how related data is retrieved for a model.</description>
+    </item>
+    <item>
+      <title>Optimizing Go deployment using Docker with scratch</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2024-10-21-go-app-docker-with-scratch/</link>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2024-10-21-go-app-docker-with-scratch/</guid>
+      <description>Using the scratch image in Docker is a great way to create a super minimal image for your Go applications. The scratch image is an empty base image, meaning it contains absolutely nothing, not even basic utilities like bash. It&amp;rsquo;s ideal for Go applications that are statically compiled and don&amp;rsquo;t require any external dependencies.&#xA;Here’s a detailed example of how to use scratch with a Go application and a multi-stage build.</description>
+    </item>
+    <item>
+      <title>Go Applications using Docker with Multi-Stage Builds</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2024-09-15-go-app-docker-mutistage-builds/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2024-09-15-go-app-docker-mutistage-builds/</guid>
+      <description>Optimizing Go Applications using Docker with Multi-Stage Builds What is Multi-Stage Docker Build? Multi-stage builds allow Docker to create optimized images by separating different phases of the build process into multiple steps (or stages). This method reduces the size of the final image and improves security by only including the necessary runtime components.&#xA;For a Go application, this means using a stage for compiling the source code and another stage for creating a minimal final image with only the compiled binary and necessary dependencies.</description>
+    </item>
+    <item>
+      <title>FrankenPHP: A modern app server for PHP, written in Go</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-12-08-frankenphp-modern-app-server-for-php-written-in-go/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-12-08-frankenphp-modern-app-server-for-php-written-in-go/</guid>
+      <description>FrankenPHP: A New Way to Run PHP Apps with Go {: style=&amp;ldquo;float: left&amp;rdquo;}&#xA;PHP is one of the most popular and widely used programming languages for web development. However, it also has some drawbacks, such as performance issues, lack of concurrency support, and dependency on external services like PHP-FPM or Apache.&#xA;What if there was a way to run PHP apps without these limitations, using the power and simplicity of Go?</description>
+    </item>
+    <item>
+      <title>PHP 8.3 typed class constants, a json_validate function, override attribute and more</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-11-24-php-8.3-features/</link>
+      <pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-11-24-php-8.3-features/</guid>
+      <description>The PHP team has released PHP 8.3 this week with typed class constants, a json_validate() function, dynamically fetching a class constant, the #[Override] attribute, and more:&#xA;Typed Class Constants What are typed class constants?&#xA;Typed class constants are a new feature in PHP 8.3 that allows you to specify the data type of a constant directly within the class definition. This enhances type safety, improves code readability, and facilitates static analysis tools.</description>
+    </item>
+    <item>
+      <title>Understanding Arithmetic Operator Precedence and Associativity</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-09-22-arithmetic-operator-precedency/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-09-22-arithmetic-operator-precedency/</guid>
+      <description>Arithmetic operators are the backbone of mathematical operations in programming, enabling developers to perform calculations. To master these operators, it&amp;rsquo;s essential to grasp not only their basic functionality but also how parentheses influence operator precedence and associativity. In this article, we&amp;rsquo;ll explore arithmetic operators, delve into the importance of parentheses, and understand associativity with practical examples.&#xA;Arithmetic Operators Arithmetic operators are symbols that allow us to perform basic mathematical operations. The common arithmetic operators include addition (+), subtraction (-), multiplication (*), division (/), and exponentiation (^).</description>
+    </item>
+    <item>
+      <title>Creating and Adding Custom Browser Extensions: A Step-by-Step Guide</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-09-15-creating-custom-browser-extensions/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-09-15-creating-custom-browser-extensions/</guid>
+      <description>Creating a custom browser extension can be a rewarding project, as it allows you to add functionality to your web browser tailored to your needs. In this blog post, we&amp;rsquo;ll walk through the process of creating and adding a custom browser extension for Google Chrome.&#xA;Introduction&#xA;Browser extensions have revolutionized the way we interact with web browsers. They empower users to customize their browsing experience, add new features, and boost productivity.</description>
+    </item>
+    <item>
+      <title>Unlocking the Power of Full-Text Search in MySQL</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-09-10-unlocking-the-power-of-full-text-search-in-mysql/</link>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-09-10-unlocking-the-power-of-full-text-search-in-mysql/</guid>
+      <description>What is Full-Text Search in MySQL? FFull-Text Search (FTS) in MySQL is a specialized search functionality designed to handle large volumes of textual data efficiently. Unlike simple pattern matching using LIKE, FTS provides a more sophisticated and efficient way to search for words or phrases within text fields.&#xA;Benefit word always attract to human being ;). So, First we will discuss about benefits of using Full-Text search. and after example of it with different types and then lastly use cases.</description>
+    </item>
+    <item>
+      <title>Laravel Limiting Chunk Collection: How to Chunk Results from a Custom Query</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-09-09-laravel-limiting-chunk-collection/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-09-09-laravel-limiting-chunk-collection/</guid>
+      <description>Laravel Limiting Chunk Collection: How to Chunk Results from a Custom Query Laravel, the popular PHP framework, offers a plethora of features that make working with databases a breeze. One such feature is the ability to chunk large query results into smaller, more manageable pieces. This comes in handy when dealing with large datasets that could otherwise cause memory issues or performance bottlenecks. In this blog post, we&amp;rsquo;ll explore the chunk method in Laravel, specifically focusing on how to chunk results from a custom query using the chunk method.</description>
+    </item>
+    <item>
+      <title>Go Lang Unmarshall show errors</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-08-16-golang-unmarshall-show-errors/</link>
+      <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-08-16-golang-unmarshall-show-errors/</guid>
+      <description>When you are Unmarshalling JSON in GO, you would probably get some error at some time regarding JSON format, fields or value types etc,.&#xA;So, most of us using simple syntax of the error to handle the error like in below example,&#xA;{: .light .w-75 .shadow .rounded-10 w=&amp;lsquo;1212&amp;rsquo; h=&amp;lsquo;668&amp;rsquo; }&#xA;package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; ) type A struct { Name string Email string } func main() { var a A bs := []byte(`{&amp;#34;Name&amp;#34;:&amp;#34;hello&amp;#34;,&amp;#34;Email&amp;#34;:123}`) if e := json.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://sufimalek.github.io/echo-hugo/about/</link>
+      <pubDate>Tue, 25 Jan 2022 14:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/about/</guid>
+      <description>I am Sufiyan Malek, I was born by the yard and stood by the yard.&#xA;Admire the &amp;ldquo;art of elegant coding&amp;rdquo;.&#xA;Believe that practice makes perfect, strive to change life.&#xA;Things shouldn’t be complicated if they can be simplified.&#xA;Connect Qualifications VTU, Belgaum: BE. in Information Science.&#xA;Experience OrientSwiss: Senior Developer, India.&#xA;ParkStreet: Senior Developer, India.&#xA;RussMedia: Developer, India.&#xA;OfficeBeacon: Web Developer, India.&#xA;Achievements Certifications Go Lang: Certification in go development.</description>
+    </item>
+    <item>
+      <title>Benefits of Symfony that make it popular PHP framework</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2020-09-01-benefits-of-symfony-that-make-it-popular-php-framework/</link>
+      <pubDate>Tue, 01 Sep 2020 13:09:01 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2020-09-01-benefits-of-symfony-that-make-it-popular-php-framework/</guid>
+      <description>developers would much rather work with a framework that simplifies both their life and their daily work.&#xA;Many developers and programmers have shown great interest in websites and applications development in recent years. In this era whereby Internet technology is transforming every sector in the economy.&#xA;Internet innovation has contributed to growth of web development industry. For a website or application to work efficiently and properly, web developers needs to focus on using the right frameworks with proper functionality and reliability and I think that all had with Symfony PHP framework</description>
+    </item>
+    <item>
+      <title>Most Useful Symfony Bundles</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2020-09-08-most-useful-symfony-bundles/</link>
+      <pubDate>Sun, 08 Sep 2019 13:09:01 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2020-09-08-most-useful-symfony-bundles/</guid>
+      <description>“Symfony is basically a collection of high-quality components and bundles”.&#xA;Bundles which help you in starting your symfony application and will help you develop a project with Symfony&#xA;This evening I made a list of the bundles that I always end up installing in the projects that I develop with Symfony. They are not all, but I think that because of the functionality they provide and the versatility they offer when configuring them, it was worth talking a little about them.</description>
+    </item>
+    <item>
+      <title>Basic HTML Elements</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/basic-elements/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/basic-elements/</guid>
+      <description>&lt;p&gt;The main purpose of this article is to make sure that all basic HTML Elements are decorated with CSS so as to not miss any possible elements when creating new themes for Hugo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/hugo-template-primer/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/hugo-template-primer/</guid>
+      <description>&lt;p&gt;Hugo uses the excellent &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; &lt;a href=&#34;https://golang.org/pkg/html/template/&#34;&gt;html/template&lt;/a&gt; library for&#xA;its template engine. It is an extremely lightweight engine that provides a very&#xA;small amount of logic. In our experience that it is just the right amount of&#xA;logic to be able to create a good static website. If you have used other&#xA;template systems from different languages or frameworks you will find a lot of&#xA;similarities in Go templates.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/getting-started-with-hugo/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/getting-started-with-hugo/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.&#xA;Save it somewhere specific as we will be using it in the next step.&#xA;More complete instructions are available at Install Hugo&#xA;Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.&#xA;Follow the following steps:&#xA;Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313 Corresponding pseudo commands:</description>
+    </item>
+    <item>
+      <title>Be Painkiller - For startup</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-06-13-be-painkiller/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-06-13-be-painkiller/</guid>
+      <description>The saying,&#xA;“Don’t be an Ayurveda medicine, be a pain killer,”&#xA;is a good analogy for the benefits of working quickly. Ayurveda medicine is often referred to as slow-acting and can take days or even weeks to produce results. Pain killers, on the other hand, are fast-acting and can provide relief from pain almost immediately. In the same way, working quickly can provide immediate results, while working slowly can take a long time to produce results.</description>
+    </item>
+    <item>
+      <title>Embedding Struct in Go</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-09-06-go-struct-embedding/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-09-06-go-struct-embedding/</guid>
+      <description>In Go, a struct is a composite data type that groups together variables (fields) under a single name. Structs are used to create custom data structures, similar to classes in other languages. You can also embed one struct within another struct to compose more complex data structures. This concept is known as &amp;ldquo;embedding&amp;rdquo; in Go.&#xA;Here&amp;rsquo;s an example of embedding in Go, along with its benefits, understanding, and conclusion:&#xA;Example of Embedding in Go: Let&amp;rsquo;s say you&amp;rsquo;re building a system to manage different types of vehicles.</description>
+    </item>
+    <item>
+      <title>Go Books</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-06-11-go-books-dariubs/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-06-11-go-books-dariubs/</guid>
+      <description>Awesome Go Books Books Starter Books Advanced Books Web Development Resources Books Starter Books The Little Go Book Free The Little Go Book is a free introduction to Google&amp;rsquo;s Go programming language. It&amp;rsquo;s aimed at developers who might not be quite comfortable with the idea of pointers and static typing. It&amp;rsquo;s longer than the other Little books, but hopefully still captures that little feeling.&#xA;An Introduction to Programming in Go Free This book is a short, concise introduction to computer programming using the language Go.</description>
+    </item>
+    <item>
+      <title>Mastering Git Squash: Streamlining Your Commit History</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-08-30-mastering-git-squash/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-08-30-mastering-git-squash/</guid>
+      <description>Understanding the Squash Flag, Benefits, and Real-World Use Cases&#xA;Git is a tool that helps you keep track of changes to your code. It can be used to collaborate with other developers, and it can also be used to revert to previous versions of your code. However, if you don&amp;rsquo;t use Git carefully, you can end up with a messy commit history. This can make it difficult to understand what you did and why.</description>
+    </item>
+    <item>
+      <title>NativePHP is a new way to build native applications</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-08-25-php-native-news/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-08-25-php-native-news/</guid>
+      <description>NativePHP is a new way to build native applications, using the tools you already know&#xA;NativePHP is a new framework for rapidly building rich, native desktop applications using PHP. If you&amp;rsquo;re already a PHP developer, you&amp;rsquo;ll feel right at home. If you&amp;rsquo;re new to PHP, we think you&amp;rsquo;ll find NativePHP easy to pick up and use. Whatever your path, we think you&amp;rsquo;re going to be productive quickly.&#xA;NativePHP is taking the world by storm, enabling PHP developers to create true cross-platform, native apps using the tools and technologies they already know: HTML, CSS, Javascript, and, of course, PHP.</description>
+    </item>
+    <item>
+      <title>template page</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/template/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/template/</guid>
+      <description>Content here</description>
+    </item>
+  </channel>
+</rss>

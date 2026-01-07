@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Featured on Mainroad</title>
+    <link>https://sufimalek.github.io/echo-hugo/tags/featured/</link>
+    <description>Recent content in Featured on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2023 13:09:01 +0000</lastBuildDate>
+    <atom:link href="https://sufimalek.github.io/echo-hugo/tags/featured/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Lang Unmarshall show errors</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-08-16-golang-unmarshall-show-errors/</link>
+      <pubDate>Wed, 16 Aug 2023 13:09:01 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-08-16-golang-unmarshall-show-errors/</guid>
+      <description>When you are Unmarshalling JSON in GO, you would probably get some error at some time regarding JSON format, fields or value types etc,.&#xA;So, most of us using simple syntax of the error to handle the error like in below example,&#xA;{: .light .w-75 .shadow .rounded-10 w=&amp;lsquo;1212&amp;rsquo; h=&amp;lsquo;668&amp;rsquo; }&#xA;package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; ) type A struct { Name string Email string } func main() { var a A bs := []byte(`{&amp;#34;Name&amp;#34;:&amp;#34;hello&amp;#34;,&amp;#34;Email&amp;#34;:123}`) if e := json.</description>
+    </item>
+    <item>
+      <title>Benefits of Symfony that make it popular PHP framework</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2020-09-01-benefits-of-symfony-that-make-it-popular-php-framework/</link>
+      <pubDate>Tue, 01 Sep 2020 13:09:01 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2020-09-01-benefits-of-symfony-that-make-it-popular-php-framework/</guid>
+      <description>developers would much rather work with a framework that simplifies both their life and their daily work.&#xA;Many developers and programmers have shown great interest in websites and applications development in recent years. In this era whereby Internet technology is transforming every sector in the economy.&#xA;Internet innovation has contributed to growth of web development industry. For a website or application to work efficiently and properly, web developers needs to focus on using the right frameworks with proper functionality and reliability and I think that all had with Symfony PHP framework</description>
+    </item>
+    <item>
+      <title>Most Useful Symfony Bundles</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2020-09-08-most-useful-symfony-bundles/</link>
+      <pubDate>Sun, 08 Sep 2019 13:09:01 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2020-09-08-most-useful-symfony-bundles/</guid>
+      <description>“Symfony is basically a collection of high-quality components and bundles”.&#xA;Bundles which help you in starting your symfony application and will help you develop a project with Symfony&#xA;This evening I made a list of the bundles that I always end up installing in the projects that I develop with Symfony. They are not all, but I think that because of the functionality they provide and the versatility they offer when configuring them, it was worth talking a little about them.</description>
+    </item>
+    <item>
+      <title>NativePHP is a new way to build native applications</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-08-25-php-native-news/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-08-25-php-native-news/</guid>
+      <description>NativePHP is a new way to build native applications, using the tools you already know&#xA;NativePHP is a new framework for rapidly building rich, native desktop applications using PHP. If you&amp;rsquo;re already a PHP developer, you&amp;rsquo;ll feel right at home. If you&amp;rsquo;re new to PHP, we think you&amp;rsquo;ll find NativePHP easy to pick up and use. Whatever your path, we think you&amp;rsquo;re going to be productive quickly.&#xA;NativePHP is taking the world by storm, enabling PHP developers to create true cross-platform, native apps using the tools and technologies they already know: HTML, CSS, Javascript, and, of course, PHP.</description>
+    </item>
+  </channel>
+</rss>

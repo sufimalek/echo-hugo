@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scratch on Mainroad</title>
+    <link>https://sufimalek.github.io/echo-hugo/categories/scratch/</link>
+    <description>Recent content in Scratch on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sufimalek.github.io/echo-hugo/categories/scratch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizing Go deployment using Docker with scratch</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2024-10-21-go-app-docker-with-scratch/</link>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2024-10-21-go-app-docker-with-scratch/</guid>
+      <description>Using the scratch image in Docker is a great way to create a super minimal image for your Go applications. The scratch image is an empty base image, meaning it contains absolutely nothing, not even basic utilities like bash. It&amp;rsquo;s ideal for Go applications that are statically compiled and don&amp;rsquo;t require any external dependencies.&#xA;Here’s a detailed example of how to use scratch with a Go application and a multi-stage build.</description>
+    </item>
+  </channel>
+</rss>

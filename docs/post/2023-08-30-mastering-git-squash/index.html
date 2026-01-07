@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mastering Git Squash: Streamlining Your Commit History - Mainroad</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Mastering Git Squash: Streamlining Your Commit History" />
+<meta property="og:description" content="Understanding the Squash Flag, Benefits, and Real-World Use Cases
+Git is a tool that helps you keep track of changes to your code. It can be used to collaborate with other developers, and it can also be used to revert to previous versions of your code. However, if you don&rsquo;t use Git carefully, you can end up with a messy commit history. This can make it difficult to understand what you did and why." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sufimalek.github.io/echo-hugo/post/2023-08-30-mastering-git-squash/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="1970-01-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="1970-01-01T00:00:00+00:00" />
+
+
+		<meta itemprop="name" content="Mastering Git Squash: Streamlining Your Commit History">
+<meta itemprop="description" content="Understanding the Squash Flag, Benefits, and Real-World Use Cases
+Git is a tool that helps you keep track of changes to your code. It can be used to collaborate with other developers, and it can also be used to revert to previous versions of your code. However, if you don&rsquo;t use Git carefully, you can end up with a messy commit history. This can make it difficult to understand what you did and why."><meta itemprop="datePublished" content="1970-01-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="1970-01-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1150">
+<meta itemprop="keywords" content="git,git-squash," />
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Mastering Git Squash: Streamlining Your Commit History"/>
+<meta name="twitter:description" content="Understanding the Squash Flag, Benefits, and Real-World Use Cases
+Git is a tool that helps you keep track of changes to your code. It can be used to collaborate with other developers, and it can also be used to revert to previous versions of your code. However, if you don&rsquo;t use Git carefully, you can end up with a messy commit history. This can make it difficult to understand what you did and why."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/echo-hugo/css/style.css">
+	<link rel="stylesheet" href="/echo-hugo/css/custom.css">
+
+	<link rel="shortcut icon" href="/echo-hugo/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/echo-hugo/" title="Sufiyan Malek" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/echo-hugo/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Sufiyan Malek</div>
+					<div class="logo__tagline">Streamlined design, enhanced functionality</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/echo-hugo/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/echo-hugo/categories/">
+				
+				<span class="menu__text">Categories</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/echo-hugo/tags/">
+				
+				<span class="menu__text">Tags</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/echo-hugo/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Mastering Git Squash: Streamlining Your Commit History</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sufiyan Malek</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="1970-01-01T00:00:00Z">1970-01-01</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/echo-hugo/categories/git/" rel="category">Git</a>
+	</span>
+</div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-git-squash">What is Git Squash?</a></li>
+    <li><a href="#why-you-should-use-it">why you should use it?</a></li>
+    <li><a href="#when-to-use-squash">When to use Squash?</a></li>
+    <li><a href="#how-to-squash-your-commits">How to Squash Your Commits?</a>
+      <ul>
+        <li><a href="#merge">Merge</a></li>
+        <li><a href="#interactive-rebase">Interactive Rebase</a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference:</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>Understanding the <strong>Squash</strong> Flag, Benefits, and Real-World Use Cases</p>
+<p><!-- raw HTML omitted -->G<!-- raw HTML omitted -->it is a tool that helps you keep track of changes to your code. It can be used to collaborate with other developers, and it can also be used to revert to previous versions of your code. However, if you don&rsquo;t use Git carefully, you can end up with a messy commit history. This can make it difficult to understand what you did and why.</p>
+<p>So, <strong>Squash</strong> is one of the option to keep your commit history clean.</p>
+<blockquote>
+<p>Sometimes, you may need to make a lot of commits to your code. This could be because you forgot to remove comments or typo or because you have a tight deadline and need to save your work before you sign off for the day. Whatever the reason, it&rsquo;s perfectly fine to make a lot of commits and you don’t know how to fix it. No problem! Git <code>Squash</code> is here to help you!</p>
+</blockquote>
+<p>And this page will explore exactly that: what is Git Squash, why you should use it, When to use Squash and some ways to perform it. Lets get started!</p>
+<!-- raw HTML omitted -->
+<h2 id="what-is-git-squash">What is Git Squash?</h2>
+<p>Git is a powerful and popular version control system that allows you to track changes in your code and collaborate with other developers. However, sometimes you may end up with a messy commit history that makes it hard to understand what you did and why. For example, you may have multiple commits that fix typos, add comments, or refactor code. These commits are not very important and may clutter your history.</p>
+<p>This is where git squash comes in handy. Git squash is a feature in Git that allows you to merge multiple commits into one single commit. This is useful when you want to clean up and simplify your commit history, group specific changes before forwarding them to others, or rewrite history to make it more meaningful.</p>
+<!-- raw HTML omitted -->
+<h2 id="why-you-should-use-it">why you should use it?</h2>
+<p>To clean up your commit history. If you have a lot of small, unrelated commits, it can be difficult to see the big picture. Git Squash can help you combine these commits into one, making your commit history cleaner and easier to understand.</p>
+<p>To make your commits more meaningful. When you squash commits, you can give them a more meaningful commit message that describes the overall change that you made. This can make it easier for you and others to understand what your code changes do.</p>
+<p>To make it easier to collaborate with others. If you are working on a team project, it can be helpful to have a clean and organized commit history. Git Squash can help you achieve this, making it easier for your team members to understand your changes.</p>
+<p><strong>Real-World Use Cases:</strong></p>
+<ul>
+<li>
+<p><strong>Use Case 1:</strong> Feature Implementation
+Imagine you&rsquo;re working on a new feature that requires multiple commits for bug fixes, improvements, and new functionality. Instead of cluttering the history with incremental commits, you can squash them into a single commit that encapsulates the entire feature&rsquo;s development.</p>
+</li>
+<li>
+<p><strong>Use Case 2:</strong> Cleaning Up Experimental Work
+During development, you might create several experimental commits while exploring different solutions. Before merging into the main branch, squash these experimental commits to present a clean and coherent history to your team.</p>
+</li>
+<li>
+<p><strong>Use Case 3:</strong> Addressing Feedback - code review
+After a code review, you receive feedback that necessitates changes to multiple commits. By squashing these commits and addressing the feedback, you create a concise history that reflects the final, approved changes.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="when-to-use-squash">When to use Squash?</h2>
+<ul>
+<li>
+<p>When you have a lot of small, unrelated commits. This can make your commit history difficult to understand and track. Squashing these commits can help to clean up your history and make it easier to see the big picture.</p>
+</li>
+<li>
+<p>When you want to give a commit a more meaningful message. When you squash commits, you can give them a single commit message that describes the overall change that you made. This can make it easier for you and others to understand what your code changes do.</p>
+</li>
+<li>
+<p>When you are working on a team project and want to make it easier for your team members to understand your changes. A clean and organized commit history can make it easier for your team members to follow your work and identify any potential issues.</p>
+</li>
+<li>
+<p>When you are preparing to release your code. A clean commit history can make it easier for users to understand your code and identify any potential issues.</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="how-to-squash-your-commits">How to Squash Your Commits?</h2>
+<p>There are two way to squash commits in Git (<strong>interactive rebase</strong> and <strong>merge</strong>), but the most common one is to use the interactive rebase command. Interactive rebase lets you modify your commit history by changing, deleting, reordering, or combining commits. but will discuss both ways here.</p>
+<h3 id="merge">Merge</h3>
+<pre tabindex="0"><code>git merge --squash feature/comments
+</code></pre><p>This option is very simple to perform. It’s clean and fast, but it gives you almost no control on what you want to do. Also, you will perform a merge—and that might not be what you want.</p>
+<p><img src="/assets/images/posts/merge-vs-merge-with-squash.png" alt="Alt"></p>
+<!-- raw HTML omitted -->
+<h3 id="interactive-rebase">Interactive Rebase</h3>
+<p>The rebase option is usually considered to be the dangerous one, as you can lose commits or change everything in a way you didn’t intend. Despite this, it’s the one I prefer, and it gives you total control over the actions you need to perform.</p>
+<pre tabindex="0"><code class="language-git" data-lang="git">git rebase -i
+</code></pre><p>To use interactive rebase, you need to specify the base commit and the branch that you want to rebase. The base commit is the one that comes before the commits that you want to squash. For example, if you want to squash the last three commits on your current branch, you can use the following command:</p>
+<pre tabindex="0"><code class="language-git" data-lang="git">git rebase -i HEAD~3
+</code></pre><p>This will open a text editor with a list of the commits that you want to rebase. Each commit will have a command in front of it, such as pick, reword, edit, or squash. The pick command means to keep the commit as it is, while the squash command means to combine the commit with the previous one.</p>
+<p>To squash commits, you need to change the command from pick to squash for the commits that you want to merge. For example, if you have three commits with the messages “Add feature A”, “Fix bug in feature A”, and “Improve feature A”, you can squash them into one by changing the commands like this:</p>
+<pre tabindex="0"><code class="language-git" data-lang="git">pick 1234567 Add feature A
+squash 2345678 Fix bug in feature A
+squash 3456789 Improve feature A
+</code></pre><p>This will combine the three commits into one with the message “Add feature A”. You can also edit the commit message by changing the command from squash to fixup, which will discard the commit message of the squashed commit.</p>
+<p>After you save and close the text editor, Git will perform the rebase and squash the commits. You can verify the result by using git log or git show.</p>
+<!-- raw HTML omitted -->
+<h2 id="reference">Reference:</h2>
+<ul>
+<li><a href="https://www.git-tower.com/learn/git/faq/git-squash/">Git Tower</a></li>
+</ul>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/echo-hugo/tags/git/" rel="tag">git</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/echo-hugo/tags/git-squash/" rel="tag">git-squash</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Sufiyan Malek avatar" src="/echo-hugo/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Sufiyan Malek</span>
+	</div>
+	<div class="authorbox__description">
+		Sufiyan Malek&rsquo;s true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/echo-hugo/post/2023-08-25-php-native-news/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">NativePHP is a new way to build native applications</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/echo-hugo/post/2023-06-11-go-books-dariubs/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Go Books</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2026 Sufiyan Malek.
+			<span class="footer__copyright-credits">Built with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> ❤️ | <a href="https://github.com/sufimalek">GitHub</a></span>
+		</div>
+	</div>
+</footer>
+
+
+
+	</div>
+<script async defer src="/echo-hugo/js/menu.js"></script>
+<script src="/echo-hugo/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

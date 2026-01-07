@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>context in Golang - Mainroad</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="context in Golang" />
+<meta property="og:description" content="Q: What is context in Golang?
+⭐ Answer:
+In Go, the context package provides a way to control and manage the lifetime, deadlines, timeouts, and cancellation of goroutines, making it essential for handling long-running operations and request-scoped data.
+Why is context needed? When working with concurrent operations like HTTP requests, database calls, or background tasks, we often need to:
+Set timeouts to avoid indefinitely running processes. Propagate cancellations to prevent resource leaks." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sufimalek.github.io/echo-hugo/post/2025-02-05-golang-context/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2025-02-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-02-05T00:00:00+00:00" />
+
+
+		<meta itemprop="name" content="context in Golang">
+<meta itemprop="description" content="Q: What is context in Golang?
+⭐ Answer:
+In Go, the context package provides a way to control and manage the lifetime, deadlines, timeouts, and cancellation of goroutines, making it essential for handling long-running operations and request-scoped data.
+Why is context needed? When working with concurrent operations like HTTP requests, database calls, or background tasks, we often need to:
+Set timeouts to avoid indefinitely running processes. Propagate cancellations to prevent resource leaks."><meta itemprop="datePublished" content="2025-02-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2025-02-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="652">
+<meta itemprop="keywords" content="golang," />
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="context in Golang"/>
+<meta name="twitter:description" content="Q: What is context in Golang?
+⭐ Answer:
+In Go, the context package provides a way to control and manage the lifetime, deadlines, timeouts, and cancellation of goroutines, making it essential for handling long-running operations and request-scoped data.
+Why is context needed? When working with concurrent operations like HTTP requests, database calls, or background tasks, we often need to:
+Set timeouts to avoid indefinitely running processes. Propagate cancellations to prevent resource leaks."/>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/echo-hugo/css/style.css">
+	<link rel="stylesheet" href="/echo-hugo/css/custom.css">
+
+	<link rel="shortcut icon" href="/echo-hugo/favicon.ico">
+		
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/echo-hugo/" title="Sufiyan Malek" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/echo-hugo/img/placeholder.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Sufiyan Malek</div>
+					<div class="logo__tagline">Streamlined design, enhanced functionality</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/echo-hugo/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/echo-hugo/categories/">
+				
+				<span class="menu__text">Categories</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/echo-hugo/tags/">
+				
+				<span class="menu__text">Tags</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/echo-hugo/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">context in Golang</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Sufiyan Malek</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-02-05T00:00:00Z">2025-02-05</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/echo-hugo/categories/golang/" rel="category">Golang</a>
+	</span>
+</div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#why-is-context-needed"><strong>Why is <code>context</code> needed?</strong></a></li>
+        <li><a href="#types-of-contexts"><strong>Types of Contexts:</strong></a></li>
+        <li><a href="#example-using-contextwithtimeout"><strong>Example: Using <code>context.WithTimeout</code></strong></a></li>
+        <li><a href="#output"><strong>Output:</strong></a></li>
+        <li><a href="#key-benefits-of-context-in-go"><strong>Key Benefits of <code>context</code> in Go:</strong></a></li>
+        <li><a href="#real-world-use-cases-of-context-in-golang"><strong>Real-World Use Cases of <code>context</code> in Golang</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#1-handling-http-requests-with-context-graceful-api-timeouts"><strong>1. Handling HTTP Requests with Context (Graceful API Timeouts)</strong></a>
+      <ul>
+        <li><a href="#example-api-with-timeout-handling"><strong>Example: API with Timeout Handling</strong></a></li>
+        <li><a href="#what-happens-here"><strong>What Happens Here?</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#2-graceful-shutdown-of-a-server"><strong>2. Graceful Shutdown of a Server</strong></a>
+      <ul>
+        <li><a href="#example-graceful-shutdown-using-context"><strong>Example: Graceful Shutdown Using Context</strong></a></li>
+        <li><a href="#why-use-context-here"><strong>Why Use Context Here?</strong></a></li>
+        <li><a href="#conclusion"><strong>Conclusion</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p><strong>Q: What is <code>context</code> in Golang?</strong></p>
+<p>⭐ <strong>Answer:</strong><br>
+In Go, the <code>context</code> package provides a way to control and manage the <strong>lifetime, deadlines, timeouts, and cancellation</strong> of goroutines, making it essential for handling long-running operations and request-scoped data.</p>
+<h3 id="why-is-context-needed"><strong>Why is <code>context</code> needed?</strong></h3>
+<p>When working with concurrent operations like HTTP requests, database calls, or background tasks, we often need to:</p>
+<ol>
+<li><strong>Set timeouts</strong> to avoid indefinitely running processes.</li>
+<li><strong>Propagate cancellations</strong> to prevent resource leaks.</li>
+<li><strong>Pass request-scoped values</strong> across function calls.</li>
+</ol>
+<h3 id="types-of-contexts"><strong>Types of Contexts:</strong></h3>
+<ol>
+<li><strong><code>context.Background()</code></strong> → Used as the base context, typically at the start of a program.</li>
+<li><strong><code>context.TODO()</code></strong> → Used when context is required but not yet defined.</li>
+<li><strong><code>context.WithCancel(parent)</code></strong> → Creates a new context that can be manually canceled.</li>
+<li><strong><code>context.WithTimeout(parent, duration)</code></strong> → Cancels automatically after a set duration.</li>
+<li><strong><code>context.WithDeadline(parent, time)</code></strong> → Cancels at a specific time.</li>
+<li><strong><code>context.WithValue(parent, key, value)</code></strong> → Attaches key-value pairs to context.</li>
+</ol>
+<h3 id="example-using-contextwithtimeout"><strong>Example: Using <code>context.WithTimeout</code></strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;context&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchData</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">After</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>): <span style="color:#75715e">// Simulate a long-running task
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Data fetched&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">Done</span>(): <span style="color:#75715e">// Context timeout or cancellation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Request canceled:&#34;</span>, <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">Err</span>())
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">cancel</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>(), <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">cancel</span>() <span style="color:#75715e">// Ensure cancellation to free resources
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">fetchData</span>(<span style="color:#a6e22e">ctx</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>) <span style="color:#75715e">// Wait for goroutine to complete
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="output"><strong>Output:</strong></h3>
+<pre tabindex="0"><code>Request canceled: context deadline exceeded
+</code></pre><ul>
+<li>The function gets <strong>canceled after 2 seconds</strong> instead of waiting for 3 seconds.</li>
+</ul>
+<h3 id="key-benefits-of-context-in-go"><strong>Key Benefits of <code>context</code> in Go:</strong></h3>
+<p>✔ <strong>Graceful shutdown of goroutines</strong><br>
+✔ <strong>Prevents resource leaks</strong><br>
+✔ <strong>Efficient request handling</strong> in web servers<br>
+✔ <strong>Time-sensitive operations</strong> like database queries</p>
+<p>more about how <code>context</code> is used in real-world applications:</p>
+<h3 id="real-world-use-cases-of-context-in-golang"><strong>Real-World Use Cases of <code>context</code> in Golang</strong></h3>
+<p>In real-world applications, the <code>context</code> package is widely used for managing <strong>timeouts, cancellations, and request-scoped data</strong> in concurrent operations. Let’s go through some common scenarios where <code>context</code> is essential.</p>
+<hr>
+<h2 id="1-handling-http-requests-with-context-graceful-api-timeouts"><strong>1. Handling HTTP Requests with Context (Graceful API Timeouts)</strong></h2>
+<p>When an API request takes too long (e.g., due to a slow database query), we can <strong>set a timeout</strong> using <code>context.WithTimeout</code> to <strong>prevent the server from hanging indefinitely</strong>.</p>
+<h3 id="example-api-with-timeout-handling"><strong>Example: API with Timeout Handling</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;context&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Simulating a slow database query
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchFromDatabase</span>(<span style="color:#a6e22e">ctx</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Context</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">select</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">After</span>(<span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>): <span style="color:#75715e">// Simulate a long-running query
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Data fetched&#34;</span>, <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">Done</span>(): <span style="color:#75715e">// Context timeout or cancellation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span>, <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">Err</span>()
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handler</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">cancel</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Context</span>(), <span style="color:#ae81ff">2</span><span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>) <span style="color:#75715e">// Set request timeout
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">cancel</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fetchFromDatabase</span>(<span style="color:#a6e22e">ctx</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#a6e22e">w</span>, <span style="color:#e6db74">&#34;Request timed out&#34;</span>, <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">StatusGatewayTimeout</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintln</span>(<span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/&#34;</span>, <span style="color:#a6e22e">handler</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Server started at :8080&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:8080&#34;</span>, <span style="color:#66d9ef">nil</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="what-happens-here"><strong>What Happens Here?</strong></h3>
+<ul>
+<li>The API <strong>automatically cancels</strong> the request if it takes <strong>longer than 2 seconds</strong>.</li>
+<li>The database query was supposed to take <strong>3 seconds</strong>, so it gets canceled.</li>
+<li>This <strong>prevents blocking</strong> server resources for too long.</li>
+</ul>
+<hr>
+<h2 id="2-graceful-shutdown-of-a-server"><strong>2. Graceful Shutdown of a Server</strong></h2>
+<p>When shutting down a server (e.g., during a deployment), we need to <strong>clean up resources</strong> and ensure <strong>ongoing requests complete gracefully</strong> before terminating.</p>
+<h3 id="example-graceful-shutdown-using-context"><strong>Example: Graceful Shutdown Using Context</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;context&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;net/http&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;os&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;os/signal&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;syscall&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;time&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handler</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintln</span>(<span style="color:#a6e22e">w</span>, <span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">srv</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Server</span>{<span style="color:#a6e22e">Addr</span>: <span style="color:#e6db74">&#34;:8080&#34;</span>, <span style="color:#a6e22e">Handler</span>: <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">DefaultServeMux</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Server started at :8080&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">srv</span>.<span style="color:#a6e22e">ListenAndServe</span>(); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ErrServerClosed</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Server error:&#34;</span>, <span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Listen for OS signals (e.g., Ctrl+C, Kubernetes shutdown)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">stop</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Signal</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>.<span style="color:#a6e22e">Notify</span>(<span style="color:#a6e22e">stop</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Interrupt</span>, <span style="color:#a6e22e">syscall</span>.<span style="color:#a6e22e">SIGTERM</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">stop</span> <span style="color:#75715e">// Wait for termination signal
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Shutdown with a timeout
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">cancel</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">WithTimeout</span>(<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>(), <span style="color:#ae81ff">5</span><span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">cancel</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Shutting down server...&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">srv</span>.<span style="color:#a6e22e">Shutdown</span>(<span style="color:#a6e22e">ctx</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Error shutting down server:&#34;</span>, <span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Server gracefully stopped&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="why-use-context-here"><strong>Why Use Context Here?</strong></h3>
+<ul>
+<li>Ensures the server <strong>completes ongoing requests</strong> before shutting down.</li>
+<li>Uses <strong>OS signals</strong> to detect termination (Ctrl+C or Docker/Kubernetes stop).</li>
+<li>`context.With</li>
+</ul>
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+<p>Keep Coding! 😊</p>
+<h2 id="reference">Reference</h2>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/echo-hugo/tags/golang/" rel="tag">golang</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Sufiyan Malek avatar" src="/echo-hugo/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Sufiyan Malek</span>
+	</div>
+	<div class="authorbox__description">
+		Sufiyan Malek&rsquo;s true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/echo-hugo/post/2025-02-05-golang-pointers/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">pointers in Golang</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/echo-hugo/post/2025-03-09-golang-go-race-detector/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Go Race Detector</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2026 Sufiyan Malek.
+			<span class="footer__copyright-credits">Built with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> ❤️ | <a href="https://github.com/sufimalek">GitHub</a></span>
+		</div>
+	</div>
+</footer>
+
+
+
+	</div>
+<script async defer src="/echo-hugo/js/menu.js"></script>
+<script src="/echo-hugo/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

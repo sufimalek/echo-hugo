@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kafka on Mainroad</title>
+    <link>https://sufimalek.github.io/echo-hugo/tags/kafka/</link>
+    <description>Recent content in Kafka on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sufimalek.github.io/echo-hugo/tags/kafka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kafka Consumer Groups</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2025-02-04-kafka-consumer-groups/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2025-02-04-kafka-consumer-groups/</guid>
+      <description>The GroupID in Kafka is used to define a consumer group, which is a key concept in Kafka for managing how messages are consumed from topics. Here&amp;rsquo;s a detailed explanation of what GroupID: &amp;ldquo;fraud-detector&amp;rdquo; means in the context of below application code: package main import ( &amp;#34;context&amp;#34; &amp;#34;encoding/json&amp;#34; &amp;#34;log&amp;#34; &amp;#34;time&amp;#34; &amp;#34;github.com/segmentio/kafka-go&amp;#34; ) type Transaction struct { TransactionID string `json:&amp;#34;transaction_id&amp;#34;` UserID string `json:&amp;#34;user_id&amp;#34;` Amount float64 `json:&amp;#34;amount&amp;#34;` Location string `json:&amp;#34;location&amp;#34;` Timestamp string `json:&amp;#34;timestamp&amp;#34;` } func main() { // Initialize Kafka reader (consumer) reader := kafka.</description>
+    </item>
+    <item>
+      <title>Understanding Apache Kafka Core Concepts</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2025-01-25-kafka-core-concepts/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2025-01-25-kafka-core-concepts/</guid>
+      <description>Apache Kafka Core Concepts Apache Kafka is a distributed streaming platform that is widely used for building real-time data pipelines and streaming applications. It is designed to handle high throughput, fault tolerance, and scalability. In this article, we will explore the core concepts of Kafka, along with some advanced topics, and provide examples in Golang to help you understand how to work with Kafka.&#xA;1. Topics A topic in Kafka is a category or feed name to which messages are sent by producers.</description>
+    </item>
+  </channel>
+</rss>

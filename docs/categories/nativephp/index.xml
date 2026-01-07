@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NativePHP on Mainroad</title>
+    <link>https://sufimalek.github.io/echo-hugo/categories/nativephp/</link>
+    <description>Recent content in NativePHP on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 1970 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sufimalek.github.io/echo-hugo/categories/nativephp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NativePHP is a new way to build native applications</title>
+      <link>https://sufimalek.github.io/echo-hugo/post/2023-08-25-php-native-news/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://sufimalek.github.io/echo-hugo/post/2023-08-25-php-native-news/</guid>
+      <description>NativePHP is a new way to build native applications, using the tools you already know&#xA;NativePHP is a new framework for rapidly building rich, native desktop applications using PHP. If you&amp;rsquo;re already a PHP developer, you&amp;rsquo;ll feel right at home. If you&amp;rsquo;re new to PHP, we think you&amp;rsquo;ll find NativePHP easy to pick up and use. Whatever your path, we think you&amp;rsquo;re going to be productive quickly.&#xA;NativePHP is taking the world by storm, enabling PHP developers to create true cross-platform, native apps using the tools and technologies they already know: HTML, CSS, Javascript, and, of course, PHP.</description>
+    </item>
+  </channel>
+</rss>
